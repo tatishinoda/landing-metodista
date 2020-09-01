@@ -13,8 +13,8 @@
 
   </head>
   <body id="page-formulario">
-    <nav class="navbar">
-      <div class="container-fluid">
+    <nav class="navbar" id="pb-navbar">>
+      <div class="container">
         <a class="navbar-brand" href="index.html"
           ><img
             src="assets/images/logo-metodista.png"
@@ -44,6 +44,7 @@
             <h2>Formulário de Inscrição para Estrangeiros</h2>
             <form id="form-estrangeiro" action="" >
             
+              <h4>Escolha a modalidade de ensino:</h4>
             <ul class="option-container">
               <li>
                 <input type="radio" id="ead" name="modalidade" value="EAD" onclick="show1();" required /> 
@@ -61,14 +62,14 @@
               <input type="text" class="form-control" name="nomecompleto" id="nomecompleto" placeholder="Nome" required />
             </div>
             <div class="form-row">
-               <div class="form-group col">
-              <label for="rne">RNE</label>
-              <input type="text" class="form-control" name="rne" placeholder="RNE" required />
-            </div>
-            <div class="form-group col">
-              <label for="celular">CELULAR</label>
-              <input type="text" class="form-control" name="celular" placeholder="Telefone" required />
-            </div>
+              <div class="form-group col">
+                <label for="rne">RNE</label>
+                <input type="text" class="form-control" name="rne" placeholder="RNE" required />
+              </div>
+              <div class="form-group col">
+                <label for="celular">CELULAR</label>
+                <input type="text" class="form-control" name="celular" placeholder="Telefone" required />
+              </div>
             </div>
            
             <div class="form-group">
@@ -81,9 +82,9 @@
             
             <div id="campos-ead">
               <div class="form-group">
-                <label for="cursosEad">Escolha uma modalidade:</label>
+                <label for="cursosEad">CURSO:</label>
                 <select class="form-control" id="cursosEad" name="cursosEad" required >
-                  <option value="" disabled selected>Escolha um curso</option>
+                  <option value="" disabled selected>Selecione o curso</option>
                   <option value="Administração">Administração</option>
                   <option value="Análise e Desenvolvimento De Sistemas">Análise e Desenvolvimento de Sistemas</option>
                   <option value="Ciência de Dados e Big Data">Ciência de Dados e Big Data</option>
@@ -109,11 +110,13 @@
                   <option value="Segurança Pública">Segurança Pública</option>
                   <option value="Serviço Social">Serviço Social</option>
                 </select>
-
-                <label for="poloEad">Polo:</label>
+              </div>
+              <div class="form-group">
+                <label for="poloEad">POLO:</label>
                 <select class="form-control" id="poloEad" name="poloEad" required>
                   <option value="" disabled selected>Selecione o polo</option>
                 </select>
+                
               </div>
             </div>
 
@@ -130,11 +133,14 @@
                   <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
                   <option value="Logística">Logística</option>
                 </select>
-            
-                <label for="turnoPresencial">Escolha um turno:</label>
+              </div>
+               <div class="form-group">
+                <label for="turnoPresencial">TURNO:</label>
                 <select class="form-control" id="turnoPresencial" name="turnoPresencial" required>
                   <option value="" disabled selected>Selecione o Turno</option>
                 </select>
+              </div>
+               <div class="form-group">
                 <label for="campusPresencial">CAMPUS:</label>
                 <select class="form-control" id="campusPresencial" name="campusPresencial" required>
                   <option value="" disabled selected>Selecione o campus</option>

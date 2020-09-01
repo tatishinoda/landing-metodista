@@ -441,6 +441,10 @@ a.btn.btn-up:focus {
   text-align: center;
   margin-top: 10px;
 }
+#page-formulario h4{
+  color: #fff;
+text-transform: uppercase;
+}
 
 @media (max-width: 991.98px) {
   #page-formulario h2{
@@ -452,7 +456,7 @@ a.btn.btn-up:focus {
 }
 #form-estrangeiro{
   color: var(--branco);
-  margin: 15px auto;
+  margin: 40px auto 15px;
   max-width: 75%;
 }
 ul.option-container {
@@ -475,9 +479,9 @@ ul.option-container li label{
   position: relative;
   font-weight: bold;
   font-size: 1.35em;
-  padding: 25px 25px 25px 80px;
-  margin: 10px auto;
-  height: 30px;
+  padding: 15px 25px 25px 80px;
+  margin: 0px auto;
+  height: 10px;
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
@@ -493,7 +497,7 @@ ul.option-container li .check{
   border-radius: 100%;
   height: 25px;
   width: 25px;
-  top: 40px;
+  top: 20px;
   left: 20px;
 	z-index: 5;
 	transition: border .25s linear;
@@ -537,10 +541,14 @@ input[type=radio]:checked ~ label{
       margin-bottom: 45px;
   }
   ul.option-container li label {
-      padding: 40px 25px 25px 10px;
+      padding: 15px 25px 25px 10px;
   }
 }
 #campos-presencial, #campos-ead{
   display: none;
+}
+
+#campos-presencial label, #campos-ead label{
+  text-transform: uppercase;
 }
 

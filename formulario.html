@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Universidade Metodista São Paulo | Processo Seletivo 2021 - Inscrições Gratuitas</title>
+    <meta name="description" content="Universidade Metodista São Paulo | Processo Seletivo 2021"/>
+    <meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos"/>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+  </head>
+  <body id="page-formulario">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="assets/images/logo-metodista.png"
+            alt="Universidade Metodista São Paulo"
+        /></a>
+
+        <div class="col-md-6">
+          <h1>Processo Seletivo 2021</h1>
+          <h4>Inscrições Gratuitas</h4>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <section class="cover">
+      <div class="overlay"></div>
+      <div class="container-fluid">
+         <div class="row">
+          <div class="col-lg-6 slogan-container">
+            <div class="slogan heading">
+               <h3>Movidos pelo conhecimento,
+                 <br>
+                inspirados pela inovação</h3>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2>Formulário de Inscrição para Estrangeiros</h2>
+            <form id="form-estrangeiro" action="" >
+            
+            <ul class="option-container">
+              <li>
+                <input type="radio" id="ead" name="modalidade" value="EAD" onclick="show1();" required /> 
+                <label for="ead">EAD</label>
+                <div class="check"></div>
+              </li>
+              <li>
+                <input type="radio" id="presencial" name="modalidade" value="Presencial" onclick="show2();" required />
+                <label for="presencial">Presencial</label> 
+                <div class="check"><div class="inside"></div></div>
+              </li>
+            </ul>
+            <div class="form-group">
+              <label for="nomecompleto">NOME</label>
+              <input type="text" class="form-control" name="nomecompleto" id="nomecompleto" placeholder="Nome" required />
+            </div>
+            <div class="form-row">
+               <div class="form-group col">
+              <label for="rne">RNE</label>
+              <input type="text" class="form-control" name="rne" placeholder="RNE" required />
+            </div>
+            <div class="form-group col">
+              <label for="celular">CELULAR</label>
+              <input type="text" class="form-control" name="celular" placeholder="Telefone" required />
+            </div>
+            </div>
+           
+            <div class="form-group">
+              <label for="Email">EMAIL</label>
+              <input type="email" class="form-control" name="Email" placeholder="Email" required />
+            </div>
+            
+ 
+            <!------------------------- EAD ---------------------->
+            
+            <div id="campos-ead">
+              <div class="form-group">
+                <label for="cursosEad">Escolha uma modalidade:</label>
+                <select class="form-control" id="cursosEad" name="cursosEad" required >
+                  <option value="" disabled selected>Escolha um curso</option>
+                  <option value="Administração">Administração</option>
+                  <option value="Análise e Desenvolvimento De Sistemas">Análise e Desenvolvimento de Sistemas</option>
+                  <option value="Ciência de Dados e Big Data">Ciência de Dados e Big Data</option>
+                  <option value="Ciências Contábeis">Ciências Contábeis</option>
+                  <option value="Comunicação Digital e Redes Sociais">Comunicação Digital e Redes Sociais</option>
+                  <option value="Educação Física (Bacharelado)">Educação Física (Bacharelado)</option>
+                  <option value="Educação Física (Licenciatura)">Educação Física (Licenciatura)</option>
+                  <option value="Gestão Ambiental">Gestão Ambiental</option>
+                  <option value="Gestão Comercial">Gestão Comercial</option>
+                  <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
+                  <option value="Gestão de Seguros">Gestão de Seguros</option>
+                  <option value="Gestão Financeira">Gestão Financeira</option>
+                  <option value="Gestão Pública">Gestão Pública</option>
+                  <option value="Jogos Digitais">Jogos Digitais</option>
+                  <option value="Jornalismo">Jornalismo</option>
+                  <option value="Logística">Logística</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Pedagogia">Pedagogia</option>
+                  <option value="Processos Gerenciais">Processos Gerenciais</option>
+                  <option value="Produção Audiovisual">Produção Audiovisual</option>
+                  <option value="Produção Multimídia">Produção Multimídia</option>
+                  <option value="Produção Publicitária">Produção Publicitária</option>
+                  <option value="Segurança Pública">Segurança Pública</option>
+                  <option value="Serviço Social">Serviço Social</option>
+                </select>
+
+                <label for="poloEad">Polo:</label>
+                <select class="form-control" id="poloEad" name="poloEad" required>
+                  <option value="" disabled selected>Selecione o polo</option>
+                </select>
+              </div>
+            </div>
+
+
+            <!--------------- Presencial ---------------------->
+            <div id="campos-presencial">
+              <div class="form-group">
+                <label for="cursosPresencial">CURSO:</label>
+                <select class="form-control" id="cursosPresencial" name="cursosPresencial" required >
+                  <option value="" disabled selected>Selecione o curso</option>
+                  <option value="Ciências Contábeis">Ciências Contábeis</option>
+                  <option value="Direito">Direito</option>
+                  <option value="Educação Física">Educação Física</option>
+                  <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
+                  <option value="Logística">Logística</option>
+                </select>
+            
+                <label for="turnoPresencial">Escolha um turno:</label>
+                <select class="form-control" id="turnoPresencial" name="turnoPresencial" required>
+                  <option value="" disabled selected>Selecione o Turno</option>
+                </select>
+                <label for="campusPresencial">CAMPUS:</label>
+                <select class="form-control" id="campusPresencial" name="campusPresencial" required>
+                  <option value="" disabled selected>Selecione o campus</option>
+                </select>
+              </div>
+            </div> 
+            <input type="submit" class="btn btn-primary" value="Enviar"></input>     
+          </form>
+          </div>
+        </div>
+      </div>    
+    </section>
+    <!-- END section -->
+    <footer class="pb_footer" role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <!-- Créditos -->
+            <p class="pb_font-14">
+              &copy; 2020. Todos direitos reservados. <br />
+              <a href="https://metodista.br/"
+                ><img src="assets/images/educacao-metodista.png"
+              />
+            </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script  src="./assets/js/script.js"></script>
+    <script src="./assets/js/validator.js"></script>
+    <!--Verificação e mudança dos Campos Obrigatórios -->
+    <script>
+      $("form").parsley();
+      $("[name=modalidade]").on('change', function () {
+        // Verifica qual opção escolhida
+        var val = $(this).val();
+
+        switch (val) {
+            case 'EAD':
+              $("[name=cursosEad]").attr("required", "required");
+              $("[name=poloEad]").attr("required", "required");
+              $("[name=cursosPresencial]").removeAttr("required");
+              $("[name=campusPresencial]").removeAttr("required");
+              $("[name=turnoPresencial]").removeAttr("required");
+              break;
+            case 'Presencial':
+              $("[name=cursosEad]").removeAttr("required");
+              $("[name=poloEad]").removeAttr("required");
+              $("[name=cursosPresencial]").attr("required", "required");
+              $("[name=campusPresencial]").attr("required", "required");
+              $("[name=turnoPresencial]").attr("required", "required");
+              break;
+        }
+        $("[name=modalidades]").removeAttr("required");
+        $("form").parsley().reset();
+      });
+    </script>
+
+    <script>
+      function show1(){
+    document.getElementById('campos-presencial').style.display ='none';
+    document.getElementById('campos-ead').style.display ='block';
+    }
+    function show2(){
+      document.getElementById('campos-ead').style.display ='none';
+      document.getElementById('campos-presencial').style.display ='block';
+    }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+<!-- ---------------------------------------- -->
+
+

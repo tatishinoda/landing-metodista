@@ -1,27 +1,26 @@
-@font-face {
-  font-family: "FontAwesome";
-  src: url("../fonts/fontawesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0")
-      format("embedded-opentype"),
-    url("../fonts/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0")
-      format("woff2"),
-    url("../fonts/fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0")
-      format("woff"),
-    url("../fonts/fontawesome/fonts/fontawesome-webfont.ttf?v=4.7.0")
-      format("truetype"),
-    url("../fonts/fontawesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Cores do Site */
 :root {
+  /* IEs */
+  --umesp:   #00529C;
+  --granbery:#1D174F;
+  --izabela: #C4161C;
+  --fames:   #006F3D;
+  --unimep:  #FCAB40;
+  --ipa:     #E5A912;
+  
+  /*basicas */
   --branco: #e2e2e2;
-  --preto: #121212;
-  --amarelo: #ffd421;
-  --hover: #428bff;
-  --active: #428bff;
+  --preto:  #121212;
+  --amarelo:#E5A912;
+  --azul:   #171241;
+  --azul2:  #2F6EB3;
+
+  /* alternativas */
+  --link1:#2F6EB3;
+  --link2:#808283;
+  --link3:#ED1C24;
+  --link4:#8B0304;
+  
 }
 
 /* Geral */
@@ -39,16 +38,16 @@ p {
   font-weight: 300;
 }
 ::-moz-selection {
-  background: #000;
-  color: #fff;
+  background: var(--preto);
+  color: var(--branco);
 }
 ::selection {
-  background: #000;
-  color: #fff;
+  background: var(--preto);
+  color: var(--branco);
 }
 ::-moz-selection {
-  background: #000;
-  color: #fff;
+  background: var(--preto);
+  color: var(--branco);
 }
 
 h1,
@@ -57,12 +56,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000;
-  font-weight: 300;
+  color: var(--umesp);
 }
 h1,
 .h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 h4,
 .h4 {
@@ -75,12 +73,15 @@ a {
   text-decoration: none;
   color: var(--branco);
 }
+a:hover{
+
+}
 .navbar {
   text-align: center;
   position: fixed;
   z-index: 99999;
   width: 100%;
-  background: #fff;
+  background: var(--branco);
 }
 @media (max-width: 767px) {
   .navbar-brand {
@@ -96,14 +97,19 @@ a {
   }
 }
 .pb_footer {
-  padding: 1em 0;
+  padding: 1em 0 0.5em;
   color: var(--preto);
+  display: flex;
 }
 .overflow-hidden {
   overflow: hidden;
 }
 
 /* Bootstrap */
+.container-fluid {
+    margin-left: 25px;
+    margin-right: 25px;
+}
 .row {
   margin-right: auto;
   margin-left: auto;
@@ -112,7 +118,7 @@ a {
 /* Conteúdo */
 .cover {
   position: relative;
-  min-height: 86vh;
+  min-height: 91vh;
   display: flex;
   align-items: stretch;
   background: url(../images/umesp_bg.jpg) no-repeat;
@@ -192,9 +198,9 @@ a {
   font-size: 18px;
   border-radius: 5px;
   padding: 20px 10px;
-  color: #fff;
+  color: var(--branco);
   text-transform: uppercase;
-  background-color: #00529c;
+  background-color: var(--umesp);
   border: 1px solid #004394;
 }
 .tabs ul {
@@ -224,7 +230,7 @@ a {
 .tabs ul li label {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  color: #929daf;
+  color: var(--branco);
   padding: 20px auto;
   overflow: hidden;
   text-overflow: none;
@@ -243,12 +249,12 @@ a {
 .tabs ul li label:focus,
 .tabs ul li label:active {
   outline: 0;
-  color: #fff;
+  color: var(--branco);
 }
 
 .tabs .content {
   margin-top: 30px;
-  color: #fff;
+  color: var(--branco);
 }
 .tabs .content section {
   display: none;
@@ -265,7 +271,7 @@ a {
   line-height: 1.4;
 }
 .tabs .content section h2 {
-  color: #428bff;
+  color: var(--azul2);
   display: none;
 }
 .tabs .content section h2::after {
@@ -274,7 +280,7 @@ a {
   display: block;
   width: 30px;
   height: 3px;
-  background: #428bff;
+  background: var(--azul2);
   margin-top: 5px;
   left: 1px;
 }
@@ -284,7 +290,7 @@ a {
   > li:nth-child(1)
   > label {
   cursor: default;
-  background: var(--active);
+  background: var(--azul2);
   color: var(--branco);
 }
 @media (max-width: 767px) {
@@ -307,7 +313,7 @@ a {
   ~ ul
   > li:nth-child(2)
   > label {
-  background: var(--active);
+  background: var(--azul2);
   cursor: default;
   color: var(--branco);
 }
@@ -408,7 +414,7 @@ a.btn.btn-up {
 }
 a.btn.btn-up:hover,
 a.btn.btn-up:focus {
-  box-shadow: inset 0 -4em 0 0 var(--hover);
+  box-shadow: inset 0 -4em 0 0 var(--azul);
 }
 
 /* SLOGAN */
@@ -437,13 +443,9 @@ a.btn.btn-up:focus {
 
 /* FORMULARIO */
 #page-formulario h2{
-  color: #fff;
+  color: var(--branco);
   text-align: center;
   margin-top: 10px;
-}
-#page-formulario h4{
-  color: #fff;
-text-transform: uppercase;
 }
 
 @media (max-width: 991.98px) {
@@ -458,6 +460,10 @@ text-transform: uppercase;
   color: var(--branco);
   margin: 40px auto 15px;
   max-width: 75%;
+}
+#form-estrangeiro h4{
+  color: var(--branco);
+text-transform: uppercase;
 }
 ul.option-container {
     list-style: none;
@@ -521,15 +527,15 @@ ul.option-container li .check::before {
 }
 
 input[type=radio]:checked ~ .check {
-  border: 5px solid var(--active);
+  border: 5px solid var(--azul2);
 }
 
 input[type=radio]:checked ~ .check::before{
-  background: var(--active);
+  background: var(--azul2);
 }
 
 input[type=radio]:checked ~ label{
-  color: var(--active);
+  color: var(--azul2);
 }
 @media (max-width:767px) {
   #form-estrangeiro{
@@ -552,3 +558,7 @@ input[type=radio]:checked ~ label{
   text-transform: uppercase;
 }
 
+#form-estrangeiro .enviar{
+ background: var(--umesp);
+ border: #004394; 
+}

@@ -51,7 +51,7 @@ $('#cursosEad').on('change', function () {
    var selectValue = $(this).val();
    // Limpa o campo e adiciona o primeiro item
    $('#poloEad').empty();
-   $('#poloEad').append("<option value='' disabled selected>POLO</option>");
+   $('#poloEad').append("<option value='' disabled selected>Selecione o polo</option>");
    // items dentro de cada select
    for (i = 0; i < poloEad[selectValue].length; i++) {
       // retorno dos itens
@@ -66,7 +66,7 @@ $('#cursosPresencial').on('change', function() {
    var selectValue = $(this).val();
    // Limpa o campo e adiciona o primeiro item
    $('#turnoPresencial').empty();
-   $('#turnoPresencial').append("<option value='' disabled selected>TURNO</option>");
+   $('#turnoPresencial').append("<option value='' disabled selected>Selecione o turno</option>");
    // items dentro de cada select
    for (i = 0; i < cursosPresencial[selectValue].length; i++) {
       // retorno dos itens

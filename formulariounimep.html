@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Faculdade Metodista Centenário | Processo Seletivo 2021 - Inscrições Gratuitas</title>
-    <meta name="description" content="Faculdade Metodista Centenário | Processo Seletivo 2021 - Inscrições Gratuitas"/>
+    <title>Universidade Metodista Piracicaba | Processo Seletivo 2021 - Inscrições Gratuitas</title>
+    <meta name="description" content="Universidade Metodista Piracicaba | Processo Seletivo 2021 - Inscrições Gratuitas"/>
     <meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet"/>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
@@ -18,7 +18,7 @@
     <div class="navbar fixed-top navbar-light bg-light box-shadow">
       <div class="container-fluid d-flex justify-content-between">
         <a href="./" class="navbar-brand d-flex align-items-center">
-          <img src="assets/images/logo-centenario.png" alt="Faculdade Metodista Centenário" class="logo">
+          <img src="assets/images/logo-unimep.png" style="max-width: 250px;" alt="universidade Metodista Piracicaba" class="logo">
         </a>
         <div>
           <h1>Processo Seletivo 2021<br>
@@ -64,8 +64,8 @@
                   <input type="text" class="form-control" name="rne" placeholder="RNE" required />
                 </div>
                 <div class="form-group col">
-                  <label for="celular">CELULAR</label>
-                  <input type="text" class="form-control" name="celular" placeholder="Telefone" required />
+                  <label for="celular">CELULAR <small>com DDD</small> </label>
+                  <input type="text" id="celular" class="form-control" name="celular" placeholder="Telefone" required />
                 </div>
               </div>
             
@@ -82,11 +82,14 @@
                     <option value="" disabled selected>Selecione o curso</option>
                     <option value="Administração">Administração</option>
                     <option value="Análise e Desenvolvimento De Sistemas">Análise e Desenvolvimento de Sistemas</option>
-                    <option value="Ciência de Dados e Big Data">Ciência de Dados e Big Data</option>
                     <option value="Ciências Contábeis">Ciências Contábeis</option>
+                    <option value="Ciência de Dados e Big Data">Ciência de Dados e Big Data</option>
                     <option value="Comunicação Digital e Redes Sociais">Comunicação Digital e Redes Sociais</option>
                     <option value="Educação Física (Bacharelado)">Educação Física (Bacharelado)</option>
                     <option value="Educação Física (Licenciatura)">Educação Física (Licenciatura)</option>
+                    <option value="Engenharia Civil">Engenharia Civil</option>
+                    <option value="Engenharia de Computação">Engenharia de Computação</option>
+                    <option value="Engenharia de Produção">Engenharia de Produção</option>
                     <option value="Gestão Ambiental">Gestão Ambiental</option>
                     <option value="Gestão Comercial">Gestão Comercial</option>
                     <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
@@ -97,6 +100,7 @@
                     <option value="Jornalismo">Jornalismo</option>
                     <option value="Logística">Logística</option>
                     <option value="Marketing">Marketing</option>
+                    <option value="Nutrição">Nutrição</option>
                     <option value="Pedagogia">Pedagogia</option>
                     <option value="Processos Gerenciais">Processos Gerenciais</option>
                     <option value="Produção Audiovisual">Produção Audiovisual</option>
@@ -104,8 +108,9 @@
                     <option value="Produção Publicitária">Produção Publicitária</option>
                     <option value="Segurança Pública">Segurança Pública</option>
                     <option value="Serviço Social">Serviço Social</option>
-                  </select>
-                </div>
+                    <option value="Teologia">Teologia</option>
+                </select>
+              </div>
 
                 <div class="form-group">
                   <label for="poloEad">POLO:</label>
@@ -121,19 +126,43 @@
                 <div class="form-group">
                   <label for="cursosPresencial">CURSO:</label>
                   <select class="form-control" id="cursosPresencial" name="cursosPresencial" required >
-                    <option value="" disabled selected>Selecione o curso</option>
+                    <option value="Default" disabled selected>Selecione o curso</option>
+                    <option value="Administração">Administração</option>
+                    <option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option>
                     <option value="Ciências Contábeis">Ciências Contábeis</option>
+                    <option value="Ciências Econômicas">Ciências Econômicas</option>
+                    <option value="Cinema e Audiovisual">Cinema e Audiovisual</option>
+                    <option value="Design Gráfico">Design Gráfico</option>
                     <option value="Direito">Direito</option>
                     <option value="Educação Física">Educação Física</option>
+                    <option value="Enfermagem">Enfermagem</option>
+                    <option value="Engenharia Civil">Engenharia Civil</option>
+                    <option value="Engenharia de Alimentos">Engenharia de Alimentos</option>
+                    <option value="Engenharia de Controle de Automação">Engenharia de Controle de Automação</option>
+                    <option value="Engenharia de Produção">Engenharia de Produção</option>
+                    <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+                    <option value="Engenharia Mecânica">Engenharia Mecânica</option>
+                    <option value="Engenharia Química">Engenharia Química</option>
+                    <option value="Farmácia">Farmácia</option>
+                    <option value="Fisioterapia">Fisioterapia</option>
+                    <option value="Gastronomia">Gastronomia</option>
+                    <option value="Gestão Comercial">Gestão Comercial</option>
                     <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
+                    <option value="Gestão Financeira Tecnólogo">Gestão Financeira Tecnólogo</option>
+                    <option value="História">História</option>
+                    <option value="Jornalismo">Jornalismo</option>
+                    <option value="Letras - Inglês">Letras - Inglês</option>
                     <option value="Logística">Logística</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="turnoPresencial">TURNO:</label>
-                  <select class="form-control" id="turnoPresencial" name="turnoPresencial" required>
-                    <option value="" disabled selected>Selecione o Turno</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Medicina Veterinária">Medicina Veterinária</option>
+                    <option value="Música">Música</option>
+                    <option value="Negócios Internacionais">Negócios Internacionais</option>
+                    <option value="Nutrição">Nutrição</option>
+                    <option value="Odontologia">Odontologia</option>
+                    <option value="Pedagogia">Pedagogia</option>
+                    <option value="Psicologia">Psicologia</option>
+                    <option value="Relações Internacionais">Relações Internacionais</option>
+                    <option value="Sistemas de Informação">Sistemas de Informação</option>
                   </select>
                 </div>
 
@@ -144,8 +173,15 @@
                   </select>
                 </div>
 
+                <div class="form-group">
+                  <label for="turnoPresencial">TURNO:</label>
+                  <select class="form-control" id="turnoPresencial" name="turnoPresencial" required>
+                    <option value="" disabled selected>Selecione o Turno</option>
+                  </select>
+                </div>
+
               </div> 
-              <input type="submit" class="btn btn-primary enviar" value="Enviar"></input>    
+              <input type="submit" class="btn btn-primary enviar" value="Enviar" />  
             </form>
           </div>
         </div>
@@ -170,7 +206,8 @@
 <!-- Scripts -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
-  <script src="./assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"></script>
+  <script src="./assets/js/unimep.js"></script>
   <script src="./assets/js/validator.js"></script>
   
   <!--Verificação e mudança dos Campos Obrigatórios -->
@@ -211,6 +248,26 @@
     document.getElementById('campos-presencial').style.display ='block';
   }
   </script>
+<script>
+    // DDD MASK
+function inputHandler(masks, max, event) {
+        var c = event.target;
+        var v = c.value.replace(/\D/g, "");
+        var m = c.value.length > max ? 1 : 0;
+        VMasker(c).unMask();
+        VMasker(c).maskPattern(masks[m]);
+        c.value = VMasker.toPattern(v, masks[m]);
+      }
 
+      var telMask = ["(99) 9999-99999", "(99) 99999-9999"];
+      var tel = document.querySelector("input#celular");
+      VMasker(tel).maskPattern(telMask[0]);
+      tel.addEventListener(
+        "input",
+        inputHandler.bind(undefined, telMask, 14),
+        false
+      );
+
+  </script>
 </body>
 </html>

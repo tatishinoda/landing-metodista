@@ -1,3 +1,4 @@
+//--------------------------------
 // Cursos EAD
 var poloEad = {
    'Administração': ['Santa Maria'],
@@ -86,3 +87,7 @@ $('#cursosPresencial').on('change', function () {
       $('#campusPresencial').append("<option value='" + campusPresencial[selectValue][i] + "'>" + campusPresencial[selectValue][i] + "</option>");
    }
 });
+
+
+
+//------------------------------

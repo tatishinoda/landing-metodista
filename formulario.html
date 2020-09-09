@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
+<html lang="en" >
+<head>
+  <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Universidade Metodista São Paulo | Processo Seletivo 2021 - Inscrições Gratuitas</title>
-    <meta name="description" content="Universidade Metodista São Paulo | Processo Seletivo 2021"/>
+    <title>Faculdade Metodista Centenário | Processo Seletivo 2021 - Inscrições Gratuitas</title>
+    <meta name="description" content="Faculdade Metodista Centenário | Processo Seletivo 2021 - Inscrições Gratuitas"/>
     <meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  
-  <body id="page-formulario">
-    <nav class="navbar" id="pb-navbar">
-      <div class="container-fluid">
-        <div class="col-md-7 text-left">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo-metodista.png" alt="Universidade Metodista São Paulo"/>
-          </a>
-        </div>
-        <div class="col-md-5 text-center">
-          <h1>Processo Seletivo 2021</h1>
-          <h4>Inscrições Gratuitas</h4>
-        </div>
-      </div>
-    </nav>
-    <!-- END nav -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
-    <main>
-      <section class="cover">
-        <div class="overlay"></div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6 slogan-container">
-              <div class="slogan heading">
-                <h3>Movidos pelo conhecimento,
-                  <br>
-                  inspirados pela inovação</h3>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <h2>Formulário de Inscrição para Estrangeiros</h2>
+<body id="page-formulario">
+
+<div class="jumbotron-fluid">
+  <header>
+    <div class="navbar fixed-top navbar-light bg-light box-shadow">
+      <div class="container-fluid d-flex justify-content-between">
+        <a href="./" class="navbar-brand d-flex align-items-center">
+          <img src="assets/images/logo-centenario.png" alt="Faculdade Metodista Centenário" class="logo">
+        </a>
+        <div>
+          <h1>Processo Seletivo 2021<br>
+          <small>Inscrições Gratuitas</small></h1>
+        </div>    
+      </div><!--/container-fluid d-flex justify-content-between-->
+    </div>
+  </header>
+  
+  <div class="jumbotron-fluid">
+    <div class="container-fluid special stripes">
+      <div class="container push-down mx-auto">
+        <div class="row">
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6">
+
+            <h2>Formulário de Inscrição para Estrangeiros</h2>
               
               <form id="form-estrangeiro" action="" >
                 <h4>Escolha a modalidade de ensino:</h4>
@@ -150,94 +145,72 @@
                 </div>
 
               </div> 
-
               <input type="submit" class="btn btn-primary enviar" value="Enviar"></input>    
-
             </form>
-
-          </div>
-        </div>
-      </div>    
-    </section>
-    <!-- END section -->
-    </main>
- 
-    <footer class="pb_footer" role="contentinfo">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-7 text-left">
-            <!-- Créditos -->
-            <p>&copy; 2020. Todos direitos reservados.</p>
-          </div>
-          <div class="col-4 text-right">
-            <a href="https://metodista.br/">
-              <img src="assets/images/educacao-metodista.png"/>
-            </a>
-          </div>
-          <div class="col-1 text-right">
           </div>
         </div>
       </div>
-    </footer>
+    </div><!-- /container-fluid special stripes -->
+  </div> <!-- /jumbotron-fluid  -->
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
+  <!-- Footer -->
+  <div class="container-fluid bg-light">
+    <div class="row">
+      <div class="col-8">
+        <p>&copy; 2020. Todos direitos reservados.</p>
+      </div>
+      <div class="col-4 text-right">
+        <a href="https://metodista.br/">
+            <img src="./assets/images/educacao-metodista.png"/>
+        </a>
+      </div>
+    </div>
+  </div>
 
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/jquery.easing.1.3.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/validator.js"></script>
-    
-    <!--Verificação e mudança dos Campos Obrigatórios -->
-    <script>
-      $("form").parsley();
-      $("[name=modalidade]").on('change', function () {
-        // Verifica qual opção escolhida
-        var val = $(this).val();
+<!-- Scripts -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/validator.js"></script>
+  
+  <!--Verificação e mudança dos Campos Obrigatórios -->
+  <script>
+    $("form").parsley();
+    $("[name=modalidade]").on('change', function () {
+      // Verifica qual opção escolhida
+      var val = $(this).val();
 
-        switch (val) {
-            case 'EAD':
-              $("[name=cursosEad]").attr("required", "required");
-              $("[name=poloEad]").attr("required", "required");
-              $("[name=cursosPresencial]").removeAttr("required");
-              $("[name=campusPresencial]").removeAttr("required");
-              $("[name=turnoPresencial]").removeAttr("required");
-              break;
-            case 'Presencial':
-              $("[name=cursosEad]").removeAttr("required");
-              $("[name=poloEad]").removeAttr("required");
-              $("[name=cursosPresencial]").attr("required", "required");
-              $("[name=campusPresencial]").attr("required", "required");
-              $("[name=turnoPresencial]").attr("required", "required");
-              break;
-        }
-        $("[name=modalidades]").removeAttr("required");
-        $("form").parsley().reset();
-      });
-    </script>
+      switch (val) {
+          case 'EAD':
+            $("[name=cursosEad]").attr("required", "required");
+            $("[name=poloEad]").attr("required", "required");
+            $("[name=cursosPresencial]").removeAttr("required");
+            $("[name=campusPresencial]").removeAttr("required");
+            $("[name=turnoPresencial]").removeAttr("required");
+            break;
+          case 'Presencial':
+            $("[name=cursosEad]").removeAttr("required");
+            $("[name=poloEad]").removeAttr("required");
+            $("[name=cursosPresencial]").attr("required", "required");
+            $("[name=campusPresencial]").attr("required", "required");
+            $("[name=turnoPresencial]").attr("required", "required");
+            break;
+      }
+      $("[name=modalidades]").removeAttr("required");
+      $("form").parsley().reset();
+    });
+  </script>
+<!-- Exibe campos corretos -->
+  <script>
+    function show1(){
+  document.getElementById('campos-presencial').style.display ='none';
+  document.getElementById('campos-ead').style.display ='block';
+  }
+  function show2(){
+    document.getElementById('campos-ead').style.display ='none';
+    document.getElementById('campos-presencial').style.display ='block';
+  }
+  </script>
 
-    <script>
-      function show1(){
-    document.getElementById('campos-presencial').style.display ='none';
-    document.getElementById('campos-ead').style.display ='block';
-    }
-    function show2(){
-      document.getElementById('campos-ead').style.display ='none';
-      document.getElementById('campos-presencial').style.display ='block';
-    }
-    </script>
-  </body>
+</body>
 </html>
-
-
-
-
-
-
-<!-- ---------------------------------------- -->
-
-

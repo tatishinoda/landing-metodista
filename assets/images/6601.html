@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" lang="pt-br" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>EAD - Reda&#231;&#227;o Online 2021/1</title>
+
+<style>
+    .custom-bg-color {
+        background-color : #86308c !important;
+        color: #000000 !important;
+    }
+    .custom-bg-color:hover {
+        background-color : #431846 !important;
+        color: #000000 !important;
+    }
+    .custom-bg-outline-color {
+        background-color: white !important;
+        color : #86308c !important;
+        border: 1px solid #86308c !important;
+    }
+    .custom-bg-outline-color:hover {
+        background-color : #86308c !important;
+        color: white !important;
+    }
+    .custom-text-color{
+        color: #080808 !important;
+    }
+    .btn-radio {
+        border-color : #86308c !important;
+        color: #080808 !important;
+        border-style: solid !important;
+        border-width: 1px !important;
+        border-radius: 5px !important;
+        background-color: white !important;
+    }
+    .btn-selected {
+        color: white !important;
+        border-style: solid !important;
+        border-width: 1px !important;
+        border-radius: 5px !important;
+        background-color : #86308c !important;
+    }
+    .falha-icon {
+        color: #86308c !important;
+    }
+
+    .wizard li.completed span.round-tab {
+        background: #a221a6 !important;
+        border: 3px #a221a6 !important;
+    }
+
+
+    .wizard li.completed p {
+        color: #a221a6 !important;
+    }
+
+    li.completed + li {
+        border-color: #a221a6 !important;
+    }
+
+    .wizard li.warning p {
+        color: #a221a6 !important;
+    }
+
+    li.warning + li {
+        border-color: #a221a6 !important;
+    }
+    .wizard li.warning span.round-tab {
+        background: #a221a6 !important;
+        border: 3px #a221a6 !important;
+    }
+    .wizard li.active span.round-tab {
+    background: #ec30f2 !important;
+    border: 3px #ec30f2 !important;
+    }
+
+    .wizard li.active p {
+        color: #ec30f2 !important;
+    }
+
+    .bearings-tooltip {
+        border: 1px solid #86308c !important;
+        color: #080808 !important;
+    }
+
+    .bearings-tooltip:before {
+        border-left: 0 solid #86308c !important;
+        border-right: 16px solid #86308c !important;
+    }
+    #modalGerenciarInscricoes {
+        position: relative;
+        z-index: 999;
+    }
+</style>
+
+
+    <link href="/Content/bootstrap?v=0q8mHivjqJQg45Dm3BwiTIrHC-_7gQtA81bYcXP-KBs1" rel="stylesheet"/>
+
+    <link href="/Content/css?v=yfo4UZI04hzRAIQc1aAQuQi0iYxEnuZ6nWrmLh3qR3E1" rel="stylesheet"/>
+
+    <link href="/Content/font?v=UqyXd_OJrhAZyUfuc57EtbIwW-RfWSksKkngrfhoXig1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script src="/bundles/jquery?v=M6dmVkrHVhoZ1gfOtvVDZbgBcQTsbWxoLsRizcGkbPk1"></script>
+
+    <script src="/bundles/bootstrap?v=ZopHcElNywqtDNks6m06g0GuN23Lqg3peMOzsfXO6wI1"></script>
+
+    <script src="/bundles/jquerymask?v=KHv1evJM764RUKTtz-p72tcyeIEnDpw7NM5R8WqU-Gg1"></script>
+
+    <script src="/bundles/jqueryvalidate?v=7_uPdfHpPdq8SXyWvrVvAzFAwliqtKoTBLNNHY_2vfs1"></script>
+
+    <script src="/bundles/util?v=VSfu--A11UnYXxVg6LKxxu6ww0LpxWlJJFxp5oISmik1"></script>
+
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500italic,500,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+
+
+    <script type="text/javascript">
+        function ImagemBannerPrincipal() {
+            if ($(window).width() > 992) {
+                $("#bannerPrincipal").attr("src", "http://educacaometodista.org.br/msg/banners-vestibular/topo-unimep-1903x285.jpg");
+            } else {
+                $("#bannerPrincipal").attr("src", "http://educacaometodista.org.br/msg/banners-vestibular/topo-unimep-1100x275.jpg");
+            }
+        }
+
+        $(document).ready(function () {
+            ImagemBannerPrincipal();
+            window.onresize = ImagemBannerPrincipal;
+        });
+    </script>
+</head>
+<body>
+    <div id="load-screen"></div>
+    <div id="lock-screen"></div>
+    <header class="header clearfix banner"><img id="bannerPrincipal" class="banner-principal img-responsive" /></header>
+    <div id="nav">
+        <div id="nav-success"></div>
+        <div id="nav-error"></div>
+    </div>
+    <div id="div-titulo" class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2" style="height: 45px;">
+            <h1 class="text-center title row-concurso">EAD - Reda&#231;&#227;o Online 2021/1</h1>
+    </div>
+
+
+
+
+
+
+
+
+
+<div class="container" id="wizard-container">
+    <div class="row">
+        <section>
+            <div class="wizard">
+                <div class="wizard-inner">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="presentation sem-pagamento provadigital  active" id="login">
+                            <a href="/Login/6601" data-toggle="tab" aria-controls="step1" role="tab" title="Login">
+                                <span class="round-tab">
+                                    <span class="step">1</span>
+                                    <span><i class="glyphicon glyphicon-ok icon-check"></i></span>
+                                </span>
+                            </a>
+                            <p class="text-center lbl-wizard">Login</p>
+
+                        </li>
+
+                        <li class="connect-line sem-pagamento provadigital login" style="left:10%"></li>
+                        <li role="presentation" class="presentation sem-pagamento provadigital  disabled" id="curso">
+                            <a id="link-curso-wizard" href="/Curso/6601" data-toggle="tab" aria-controls="step2" role="tab" title="Curso">
+                                <span class="round-tab">
+                                    <span class="step">2</span>
+                                    <span><i class="glyphicon glyphicon-ok icon-check"></i></span>
+                                </span>
+                            </a>
+                            <p class="text-center lbl-wizard">Curso</p>
+
+                        </li>
+
+                        <li class="connect-line sem-pagamento provadigital curso" style="left:30%"></li>
+                        <li role="presentation" class="presentation sem-pagamento provadigital  disabled" id="dados">
+                            <a href="/Dados/6601" data-toggle="tab" aria-controls="step3" role="tab" title="Dados">
+                                <span class="round-tab">
+                                    <span class="step">3</span>
+                                    <span><i class="glyphicon glyphicon-ok icon-check"></i></span>
+                                </span>
+                            </a>
+                            <p class="text-center lbl-wizard">Dados</p>
+
+                        </li>
+
+                                                    <li class="connect-line sem-pagamento provadigital redacao" style="left:50%"></li>
+                            <li role="presentation" class="presentation sem-pagamento provadigital disabled" id="redacaoOnline">
+                                <a href="/RedacaoOnline/6601" data-toggle="tab" aria-controls="complete" role="tab" title="Reda&#231;&#227;o Online">
+                                    <span class="round-tab">
+
+                                        <span class="step">4</span>
+                                        <span>
+                                            <i class="glyphicon glyphicon-ok icon-check"></i>
+                                            <i class="fa fa-exclamation icon"></i>
+                                        </span>
+                                    </span>
+                                </a>
+                                <p class="text-center lbl-wizard">Reda&#231;&#227;o Online</p>
+
+                            </li>
+                        <li class="connect-line sem-pagamento provadigital" style="left:70%"></li>
+                        <li role="presentation" class="presentation sem-pagamento provadigital disabled" id="resumo">
+                            <a href="/Resumo/6601" data-toggle="tab" aria-controls="complete" role="tab" title="Resumo">
+                                <span class="round-tab">
+                                    <span class="step">5</span>
+                                    <span><i class="glyphicon glyphicon-ok icon-check"></i></span>
+                                </span>
+                            </a>
+                            <p class="text-center lbl-wizard">Resumo</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<link href="/plugins/wizardStyles?v=AF5TbpNhk15CkyeYTn76G2nu96E9l_spAIzhS9oOVHw1" rel="stylesheet"/>
+
+<script src="/plugins/wizard?v=KKp1nbPeBouk19q7WpX_8VTD9r_svZ8tJNuxcsVbWZ41"></script>
+
+
+    <br />
+    
+    <br />
+    
+
+<script>localStorage.setItem("Inscricao", null)</script>
+
+<div class="container">
+<div id="modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content form">
+            <div class="modal-header esqueciMinhaSenha">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="col-md-8 modal-title control-label text esqueciMinhaSenha">ESQUECI MINHA  SENHA</h4>
+            </div>
+            <div id="erro" class="erro">
+            </div>
+            <div class="modal-body">
+                <br />
+                <div class="form-group has-feedback">
+                    <label class="col-xs-12 col-xs-offset-0 col-md-4 col-md-offset-0 text" for="esqueciMinhaSenha-cpf">Digite seu CPF</label>
+                    <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-0">
+                        <input id="esqueciMinhaSenha-cpf" name="esqueciMinhaSenha-cpf" type="text" placeholder="" class="form-control input-md text">
+                        <span class="glyphicon form-control-feedback" id="esqueciMinhaSenha-cpfIcon"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer esqueciMinhaSenha">
+                <br />
+                <div class="form-group has-feedback">
+                    <div class="col-xs-12 col-xs-offset-0 col-md-12 col-md-offset-0">
+                        <button id="btn-esqueci-minha-senha" type="button" class="btn btn-primary pull-right custom-bg-color" onclick="return false;">ENVIAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-login-facebook-celular" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content form">
+            <div class="modal-header login-facebook-celular">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="col-md-8 modal-title control-label text login-facebook-celular">EFETUAR LOGIN COM FACEBOOK</h4>
+            </div>
+            <div id="nav-erro-login-facebook" class="erro">
+            </div>
+            <div class="modal-body">
+                <br />
+                <div class="form-group has-feedback">
+                    <label class="col-xs-12 col-xs-offset-0 col-md-4 col-md-offset-0 text" for="loginFacebookCelularr">Digite seu celular</label>
+                    <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-0">
+                        <input id="loginFacebookCelular" name="loginFacebookCelular" type="text" placeholder="" class="form-control input-md text">
+                        <span class="glyphicon form-control-feedback" id="loginFacebookCelularIcon"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer login-facebook-celular">
+                <br />
+                <div class="form-group has-feedback">
+                    <div class="col-xs-12 col-xs-offset-0 col-md-12 col-md-offset-0">
+                        <a id="btnLoginFacebookCelular" class="btn btn-primary btn-social btn-facebook pull-right" onclick="return false;"><i class="fa fa-facebook"><span class="pipeline-facebook">|</span></i> Entrar com Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <input id="aceitouLgpd" name="aceitouLgpd" type="hidden" value="False" />
+    <input id="ipAceiteLgpd" name="ipAceiteLgpd" type="hidden" value="" />
+    <input id="dataAceiteLgpd" name="dataAceiteLgpd" type="hidden" value="" />
+    <input id="habilitaLGPD" name="habilitaLGPD" type="hidden" value="False" />
+
+    <form id="form" class="form-horizontal" autocomplete="off">
+        <div class="row form">
+            <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <p class="col-xs-12 col-xs-offset-0 col-md-12 col-md-offset-0 col-md-offset-0 info-text">Todos os campos são obrigatórios</p>
+                </div>
+                <div class="form-group has-feedback">
+                        <label class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0 text-right control-label text" for="textinput">CPF</label>
+                        <div class="col-xs-12 col-xs-offset-0 col-md-4 col-md-offset-0">
+                            <input id="cpf" name="cpf" type="tel" placeholder="" class="form-control input-md text">
+                            <span class="glyphicon form-control-feedback" id="cpfIcon"></span>
+                        </div>
+                    <div class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0 facebook hidden">
+                        <div class="facebook-mobile">
+                            <a id="btnFacebook" class="btn btn-social btn-facebook" onclick="return false;">
+                                <i class="fa fa-facebook"><span class="pipeline-facebook">|</span></i> Entrar com Facebook
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0 facebook-mobile div-login-line hidden">
+                        <div class="div-login-line-interna">
+                            <hr class="login-line" />
+                            <label class="label-login-line">OU CADASTRE-SE COM SEU EMAIL</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0 text-right control-label text" for="textinput">E-mail</label>
+                    <div class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-0">
+                        <input id="email" name="email" type="email" placeholder="" class="form-control input-md text" maxlength="100" disabled>
+                        <span class="glyphicon form-control-feedback" id="emailIcon"></span>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0 text-right control-label text" for="textinput">Nome Completo</label>
+                    <div class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-0">
+                        <input id="nomeCompleto" name="nomeCompleto" type="text" placeholder="" class="form-control input-md text" maxlength="150" disabled>
+                        <span class="glyphicon form-control-feedback" id="nomeCompletoIcon"></span>
+                    </div>
+                </div>
+                    <div class="form-group has-feedback celular">
+                        <label class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0 text-right control-label text" for="textinput">Celular</label>
+                        <div class="col-xs-12 col-xs-offset-0 col-md-4 col-md-offset-0">
+                            <input id="celular" name="celular" type="tel" placeholder="" class="form-control input-md text" disabled>
+                            <span class="glyphicon form-control-feedback" id="celularIcon"></span>
+                        </div>
+                    </div>
+                <div class="form-group has-feedback senha margin-bottom-0">
+                    <label id="lblSenha" class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0 text-right control-label text" for="textinput">Crie sua Senha</label>
+                    <div class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-0">
+                        <input id="senha" name="senha" maxlength="100" type="password" placeholder="" class="form-control input-md text" disabled>
+                        <span class="glyphicon form-control-feedback" id="senhaIcon"></span>
+                    </div>
+                </div>
+                <div class="form-group esqueciMinhaSenha">
+                    <div class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-3">
+                        <p id="lblEsqueciMinhaSenha" class="lbl-esqueci-minha-senha">Voc&#234; usar&#225; a senha para acompanhar sua participa&#231;&#227;o no Vestibular</p>
+                        <a id="linkEsqueciMinhaSenha" data-toggle="modal" data-target="#modal" class="link-Esqueci-Minha-Senha hidden" href="#">Esqueci minha senha</a>
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <div class="col-xs-12 col-xs-offset-0 col-md-12 col-md-offset-0">
+                        <button id="btnSelecionarCurso" name="singlebutton" onclick="return false;" class="btn btn-primary pull-md-right custom-bg-color">
+                                    Selecionar Curso
+
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Modal -->
+    <div class="modal fade" style="margin-top:10%!important" data-backdrop="static" id="lgpdModal" tabindex="-1" role="dialog" aria-labelledby="lgpdModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text">
+                        <p style="text-align:justify;"><span></span></p>
+
+                </div>
+                <div class="form-check text-center" style="margin-bottom:12px!important;">
+                    <input type="checkbox" class="form-check-input" id="CheckAceitar">
+                    <label class="text" for="CheckAceitar">Declaro que li e concordo com os termos.</label>
+                </div>
+                <div class="form-group text-center" style="margin-bottom:-10px!important">
+                    <button type="button" id="lgbtCancelar" class="form text btn btn-secondary">Recusar</button>
+                    <button type="button" id="lgbtAceite" disabled class="form text btn btn-primary custom-bg-color disabled">Prosseguir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var codigoAppFacebook = '235897164413485';
+    var tamanhoMinimoSenha = 0;
+    var exibirCelular = 'True'.toLowerCase() == "true";
+    GLOBAL.utilizarNomeSocial = 'False'.toLowerCase() == "true";
+    GLOBAL.SomenteExAlunos =  'False'.toLowerCase() == "true";
+
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+        var equals = cookies[i].indexOf("=");
+        var name = equals > -1 ? cookies[i].substr(0, equals) : cookies[i];
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }
+</script>
+
+<script src="/bundles/login?v=RnQIl5Ys1kzGsrdmXean6PxPHOnQvOwIpi7IGHx2ZFg1"></script>
+
+<script src="/bundles/facebook?v=pmK6wWulpChg33Tz6GL6B4g5VDJiHB29lxoAyS5RS6c1"></script>
+
+
+    <br />
+    <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+            <footer class="footer text-center footer-text custom-text-color">
+                <div class="line-hr custom-bg-color center-block"></div>
+                <a href="http://metodista.inscricao.crmeducacional.com/login/7101" target="_blank">
+                    <p class="custom-text-color">Clica e veja a documenta&#231;&#227;o necess&#225;ria para o processo </p>
+                </a>
+            </footer>
+
+    </div>
+    <script src="/bundles/layout?v=-P0D-wuCXWIZkSZedzlMxpOLS4TXXaYIMDME_8z1xcE1"></script>
+
+<script type="text/javascript">
+$( document ).ready(function() {    
+    $("#crmeduc_nacionalidadetexto").parents(".row-curso").hide();
+    $("#met_nacionalidade").change(function(){
+         if ($(this).val() == "2"){
+            $("#crmeduc_nacionalidadetexto").parents(".row-curso").show();
+            $("label[for='crmeduc_nacionalidadetexto']").children().hide();
+            adicionarRegra();        
+         }
+		  else{
+		  $("#crmeduc_nacionalidadetexto").parents(".row-curso").hide();
+      	  removerRegra();
+         } 
+    })
+})
+ 
+function adicionarRegra(){
+    $("#crmeduc_nacionalidadetexto").rules("add", {
+                required: true
+        });
+ 
+        $("#crmeduc_nacionalidadetexto").focusout(function () {
+                $(this).valid();
+        });
+ 
+        $("#crmeduc_nacionalidadetexto").change(function () {
+                $(this).valid();
+        });
+}
+ 
+function removerRegra(){
+    $("#crmeduc_nacionalidadetexto").rules("remove");
+    $("#crmeduc_nacionalidadetextoButton").hide();
+}
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {    
+    $("#met_rnemetodista").parents(".row-curso").hide();
+    $("#met_nacionalidade").change(function(){
+         if ($(this).val() == "2"){
+            $("#met_rnemetodista").parents(".row-curso").show();
+            $("label[for='met_rnemetodista']").children().hide();
+            adicionarRegra();        
+         }
+		  else{
+		  $("#met_rnemetodista").parents(".row-curso").hide();
+      	  removerRegra();
+         } 
+    })
+})
+ 
+function adicionarRegra(){
+    $("#met_rnemetodista").rules("add", {
+                required: true
+        });
+ 
+        $("#met_rnemetodista").focusout(function () {
+                $(this).valid();
+        });
+ 
+        $("#met_rnemetodista").change(function () {
+                $(this).valid();
+        });
+}
+ 
+function removerRegra(){
+    $("#met_rnemetodista").rules("remove");
+    $("#met_rnemetodistaButton").hide();
+}
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    (function () {
+       const img = document.createElement("img")
+       img.src = "http://educacaometodista.org.br/msg/banners-vestibular/icone_preco.png" //Alterar link da imagem de exibição na tela
+       img.setAttribute("style", "width: 80px;") //tamanho sugerido da imagem, 80px, podendo ser alterado conforme necessidade
+   
+       const link = document.createElement("a")
+       link.href = "https://metodista.br/financeiro/graduacao-a-distancia-calouros" // Alterar o link para redirecionar em nova aba
+link.setAttribute("target", "_blank")
+   
+       link.appendChild(img)
+   
+       const div = document.createElement("div")
+       div.appendChild(link)
+       div.setAttribute("style", "position: fixed; right: 20px; bottom: 100px;") // Alterar entre "left" e "right" para posicionar na pagina - 20px e 100 px posicao padrão, altere os valores para deslocar a imagem na pagina.
+       
+   
+        // var x = document.getElementsByTagName('script')[0]; 
+        // x.parentNode.insertBefore(div, x);
+        document.body.appendChild(div)
+    })();
+   </script>
+
+</body>
+</html>

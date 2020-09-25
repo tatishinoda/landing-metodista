@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--umesp);
+  color: var(-var(--umesp)fames);
 }
 h1{
   font-size: 25px;
@@ -50,7 +50,7 @@ a {
   color: var(--branco);
 }
 a:hover{
- color: var(--link2);
+ color: var(--preto);
 }
 
 .logo {
@@ -107,7 +107,7 @@ a:hover{
   background: transparent;
   padding: 20px 50px;
   width: 100%;
-  /* min-height: 550px; REATIVAR QUANDO TIVER MAIS ITEMS!!!!  */
+  min-height: 550px;
   min-width: 240px;
   text-align: center;
   border-radius: 5px;
@@ -368,11 +368,13 @@ a.btn.btn-up:focus {
     font-size: 1.5rem;
   }
 }
-
+/* #page-formulario .overlay {
+  background: rgba(0, 0, 0, 0.8);
+} */
 #form-estrangeiro{
   color: var(--branco);
   margin: 40px auto 15px;
-  max-width: 85%;
+  max-width: 75%;
 }
 #form-estrangeiro h4{
   color: var(--branco);
@@ -476,13 +478,6 @@ input[type=radio]:checked ~ .check::before{
 
 
 /*Mobile*/
-@media (min-width: 768px){
-  #form-estrangeiro, .tabs{
-    background: rgba(0,0,0,0.5);
-    padding: 10px;
-    border-radius: 8px;
-  }
-}
 @media (max-width: 767px){
   .mobile-wrapper{
     display: block;
@@ -492,7 +487,7 @@ input[type=radio]:checked ~ .check::before{
   .stripes {
     background-image: url(../images/bg_mobile.png);
     min-height: 100vh;
-    height: 1300px;
+    height: 1150px;
     background-size: contain;
     background-repeat: repeat-y;
 }
@@ -527,7 +522,7 @@ input[type=radio]:checked ~ .check::before{
     padding-top: 95px;
   }  
   .stripes {
-    height: 1500px;
+    height: 1250px;
   }
   .tabs {
     background:transparent;

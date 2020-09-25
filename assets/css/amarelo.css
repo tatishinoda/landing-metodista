@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--umesp);
+  color: var(--preto);
 }
 h1{
   font-size: 25px;
@@ -50,7 +50,7 @@ a {
   color: var(--branco);
 }
 a:hover{
- color: var(--link2);
+ color: var(--preto);
 }
 
 .logo {
@@ -66,7 +66,7 @@ a:hover{
 
 /* Background */
 .stripes {
-    background-image: url(../images/bg_azul.jpg);
+    background-image: url(../images/bg_laranja.jpg);
     /* background-attachment: scroll; */
     background-position: top left;
     background-repeat: no-repeat;
@@ -134,7 +134,7 @@ a:hover{
   padding: 20px 10px;
   color: var(--branco);
   text-transform: uppercase;
-  background-color: var(--azul);
+  background-color: var(--amarelo);
 }
 .tabs ul {
   list-style-type: none;
@@ -204,7 +204,7 @@ a:hover{
   line-height: 1.4;
 }
 .tabs .content section h2 {
-  color: var(--umesp);
+  color: var(--unimep);
   display: none;
 }
 .tabs .content section h2::after {
@@ -213,7 +213,7 @@ a:hover{
   display: block;
   width: 30px;
   height: 3px;
-  background: var(--umesp);
+  background: var(--unimep);
   margin-top: 5px;
   left: 1px;
 }
@@ -223,7 +223,7 @@ a:hover{
   > li:nth-child(1)
   > label {
   cursor: default;
-  background: var(--umesp);
+  background: var(--unimep);
   color: var(--branco);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
@@ -249,7 +249,7 @@ a:hover{
   ~ ul
   > li:nth-child(2)
   > label {
-  background: var(--umesp);
+  background: var(--unimep);
   cursor: default;
   color: var(--branco);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
@@ -353,7 +353,7 @@ a.btn.btn-up {
 }
 a.btn.btn-up:hover,
 a.btn.btn-up:focus {
-  box-shadow: inset 0 -4em 0 0 var(--azul);
+  box-shadow: inset 0 -4em 0 0 var(--amarelo);
 }
 
 /* Page - Formulário Estrangeiros */
@@ -368,11 +368,13 @@ a.btn.btn-up:focus {
     font-size: 1.5rem;
   }
 }
-
+/* #page-formulario .overlay {
+  background: rgba(0, 0, 0, 0.8);
+} */
 #form-estrangeiro{
   color: var(--branco);
   margin: 40px auto 15px;
-  max-width: 85%;
+  max-width: 75%;
 }
 #form-estrangeiro h4{
   color: var(--branco);
@@ -440,11 +442,11 @@ ul.option-container li .check::before {
 }
 
 input[type=radio]:checked ~ .check {
-  border: 5px solid var(--umesp);
+  border: 5px solid var(--unimep);
 }
 
 input[type=radio]:checked ~ .check::before{
-  background: var(--umesp);
+  background: var(--unimep);
 }
 
 @media (max-width:767px) {
@@ -467,12 +469,13 @@ input[type=radio]:checked ~ .check::before{
   text-transform: uppercase;
 }
 #form-estrangeiro .enviar{
-  background: var(--azul);
+  background: var(--amarelo);
   border: none; 
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
+
 
 
 /*Mobile*/

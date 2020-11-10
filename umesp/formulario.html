@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<title>Universidade Metodista São Paulo | Processo Seletivo 2021 - Inscrições Gratuitas</title>
+	<meta name="description" content="Universidade Metodista São Paulo | Processo Seletivo 2021 - Inscrições Gratuitas"/>
+	<meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet"/>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1611116-7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-1611116-7');
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WCWGBB3');
+	</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCWGBB3"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+</head>
+
+<body id="page-formulario">
+	<div class="jumbotron-fluid">
+		<header>
+			<div class="navbar fixed-top navbar-light bg-light box-shadow">
+				<div class="container-fluid d-flex justify-content-between">
+					<a href="./" class="navbar-brand d-flex align-items-center">
+						<img src="assets/images/logo-metodista.png" alt="Universidade Metodista São Paulo" class="logo" />
+					</a>
+					<div>
+						<h1>
+							Processo Seletivo 2021<br />
+							<small>Inscrições Gratuitas</small>
+						</h1>
+					</div>
+				</div>
+				<!--/container-fluid d-flex justify-content-between-->
+			</div>
+		</header>
+
+		<div class="jumbotron-fluid">
+			<div class="container-fluid special stripes">
+				<div class="row no-gutters mobile-wrapper">
+					<img src="assets/images/topo-umesp.jpg" class="topo-mobile" alt="" />
+				</div>
+				<div class="container push-down mx-auto">
+					<div class="row">
+						<div class="col-lg-6"></div>
+						<div class="col-lg-6 content-wrapper">
+							<h2>Formulário de Inscrição para Estrangeiros</h2>
+
+							<form id="form-estrangeiro" method="POST" action="http://metodista.api.crmeducacional.com/api/IntegracaoFormularioInteresse/SalvarDados" enctype="application/x-www-form-urlencoded">
+								<h4>Escolha a modalidade de ensino:</h4>
+
+								<ul class="option-container">
+									<li>
+										<input type="radio" id="EAD" name="crmeduc_modalidade_interesse" value="191.030.002" required />
+										<label for="EAD">EAD</label>
+										<div class="check"></div>
+									</li>
+									<li>
+										<input type="radio" id="Presencial" name="crmeduc_modalidade_interesse" value="191.030.000" required />
+										<label for="Presencial">Presencial</label>
+										<div class="check"><div class="inside"></div></div>
+									</li>
+								</ul>
+
+								<div class="form-group">
+									<label for="fullname">NOME</label>
+									<input type="text" class="form-control" name="fullname" id="fullname" placeholder="Nome" required />
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col">
+										<label for="met_rnemetodista">RNE</label>
+										<input type="text" class="form-control" id="met_rnemetodista" name="met_rnemetodista" placeholder="RNE" required />
+									</div>
+									<div class="form-group col">
+										<label for="mobilephone">CELULAR <small>com DDD</small> </label>
+										<input type="text" id="mobilephone" class="form-control" name="mobilephone" placeholder="Telefone" required />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="emailaddress1">EMAIL</label>
+									<input type="email" class="form-control" id="emailaddress1" name="emailaddress1" placeholder="Email" required />
+								</div>
+
+								<!-- ORIGEM - preenche que veio do formulário de leads -->
+								<input type="hidden" name="crmeduc_origem_cliente" id="crmeduc_origem_cliente" value="191.030.009" />
+								<!-- CAMPUS - Preenche com o valor da IE correspondente ou do EAD -->
+								<!--
+								Valores:
+								UNIMEP = 191.030.001
+								UMESP = 191.030.002
+								IPA = 191.030.003
+								IMIH = 191.030.000
+								IMG = 191.030.004
+								FMC = 191.030.005
+								EAD =  191.030.006
+								-->
+								<input type="hidden" name="crmeduc_campus_interesse" id="crmeduc_campus_interesse" value="" />
+								<!------------------------- EAD ---------------------->
+								<div id="campos-ead">
+									<div class="form-group">
+										<label for="crmeduc_curso_interesse">CURSO:</label>
+										<select class="form-control" id="cursoEad" name="crmeduc_curso_interesse" required>
+											<option value="Default" disabled selected>Selecione o curso</option>
+											<option value="33">Administração</option>
+											<option value="2">Análise e Desenvolvimento de Sistemas</option>
+											<option value="6">Ciências Contábeis</option>
+											<option value="107">Ciência de Dados e Big Data</option>
+											<option value="110">Comunicação Digital e Redes Sociais</option>
+											<option value="120">Educação Física (Bacharelado)</option>
+											<option value="111">Educação Física (Licenciatura)</option>
+											<option value="12">Engenharia Civil</option>
+											<option value="13">Engenharia de Computação</option>
+											<option value="14">Engenharia de Produção</option>
+											<option value="113">Gestão Ambiental</option>
+											<option value="103">Gestão Comercial</option>
+											<option value="19">Gestão de Recursos Humanos</option>
+											<option value="115">Gestão de Seguros</option>
+											<option value="21">Gestão Financeira</option>
+											<option value="116">Gestão Pública</option>
+											<option value="117">Jogos Digitais</option>
+											<option value="125">Jornalismo</option>
+											<option value="24">Logística</option>
+											<option value="25">Marketing</option>
+											<option value="118">Nutrição</option>
+											<option value="26">Pedagogia</option>
+											<option value="27">Processos Gerenciais</option>
+											<option value="104">Produção Audiovisual</option>
+											<option value="134">Produção Multimídia</option>
+											<option value="108">Produção Publicitária</option>
+											<option value="112">Segurança Pública</option>
+											<option value="31">Serviço Social</option>
+											<option value="141">Teologia</option>
+										</select>
+									</div>
+								</div>
+
+								<!--------------- Presencial ---------------------->
+								<div id="campos-presencial">
+									<div class="form-group">
+										<label for="cursosPresencial">CURSO:</label>
+										<select class="form-control" id="cursosPresencial" name="crmeduc_curso_interesse" required>
+											<option value="Default" disabled selected>Selecione o curso</option>
+											<option value="33">Administração</option>
+											<option value="102">Administração - Comércio Exterior</option>
+											<option value="2">Análise e Desenvolvimento de Sistemas</option>
+											<option value="3">Arquitetura e Urbanismo</option>
+											<option value="105">Biomedicina</option>
+											<option value="106">Biotecnologia</option>
+											<option value="107">Ciência de Dados e Big Data</option>
+											<option value="6">Ciências Contábeis</option>
+											<option value="109">Ciências Econômicas</option>
+											<option value="110">Comunicação Digital e Redes Sociais</option>
+											<option value="8">Direito</option>
+											<option value="10">Educação Física</option>
+											<option value="34">Enfermagem</option>
+											<option value="114">Engenharia Biomédica</option>
+											<option value="12">Engenharia Civil</option>
+											<option value="13">Engenharia da Computação</option>
+											<option value="14">Engenharia de Produção</option>
+											<option value="1">Estética e Cosmética</option>
+											<option value="119">Farmácia</option>
+											<option value="36">Fisioterapia</option>
+											<option value="121">Gastronomia</option>
+											<option value="122">Gestão da Qualidade</option>
+											<option value="123">Gestão da Tecnologia da Informação</option>
+											<option value="19">Gestão de Recursos Humanos</option>
+											<option value="125">Jornalismo</option>
+											<option value="23">Letras - Língua Estrangeira</option>
+											<option value="24">Logística</option>
+											<option value="128">Medicina Veterinária</option>
+											<option value="25">Marketing</option>
+											<option value="130">Odontologia</option>
+											<option value="26">Pedagogia</option>
+											<option value="27">Processos Gerenciais</option>
+											<option value="133">Processos Químicos</option>
+											<option value="134">Produção Multimídia</option>
+											<option value="35">Psicologia</option>
+											<option value="136">Publicidade e Propaganda</option>
+											<option value="137">Radio, TV e Internet</option>
+											<option value="29">Relações Internacionais</option>
+											<option value="139">Relações Públicas</option>
+											<option value="140">Sistema de Informação</option>
+											<option value="141">Teologia</option>
+										</select>
+									</div>
+								</div>
+								<input type="submit" class="btn btn-primary enviar" value="Enviar" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /container-fluid special stripes -->
+		</div>
+		<!-- /jumbotron-fluid  -->
+
+		<!-- Footer -->
+		<div class="container-fluid bg-light">
+			<div class="row">
+				<div class="col-8">
+					<p>&copy; 2020. Todos direitos reservados.</p>
+				</div>
+				<div class="col-4 text-right">
+					<a href="https://metodista.br/">
+						<img src="./assets/images/educacao-metodista.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+
+	<script src="./assets/js/umesp.js"></script>
+	<script src="./assets/js/validator.js"></script>
+	<script>
+		$("form").parsley();
+	</script>
+
+</body>
+</html>

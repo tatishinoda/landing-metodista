@@ -40,81 +40,89 @@
 
             <h2>Formulário de Inscrição para Estrangeiros</h2>
               
-              <form id="form-estrangeiro" action="" >
-                <h4>Escolha a modalidade de ensino:</h4>
+              <form id="form-estrangeiro" method="POST"	action="http://metodista.api.crmeducacional.com/api/IntegracaoFormularioInteresse/SalvarDados" enctype="application/x-www-form-urlencoded">
+								<h4>Escolha a modalidade de ensino:</h4>
 
-                <ul class="option-container">
-                  <li>
-                    <input type="radio" id="ead" name="modalidade" value="EAD" onclick="show1();" required /> 
-                    <label for="ead">EAD</label>
-                    <div class="check"></div>
-                  </li>
-                  <li>
-                    <input type="radio" id="presencial" name="modalidade" value="Presencial" onclick="show2();" required />
-                    <label for="presencial">Presencial</label> 
-                    <div class="check"><div class="inside"></div></div>
-                  </li>
-                </ul>
+								<ul class="option-container">
+									<li>
+										<input type="radio" id="EAD" name="crmeduc_modalidade_interesse" value="191.030.002" required />
+										<label for="EAD">EAD</label>
+										<div class="check"></div>
+									</li>
+									<li>
+										<input type="radio" id="Presencial" name="crmeduc_modalidade_interesse" value="191.030.000"required />
+										<label for="Presencial">Presencial</label>
+										<div class="check"><div class="inside"></div></div>
+									</li>
+								</ul>
 
-              <div class="form-group">
-                <label for="nomecompleto">NOME</label>
-                <input type="text" class="form-control" name="nomecompleto" id="nomecompleto" placeholder="Nome" required />
-              </div>
+								<div class="form-group">
+									<label for="fullname">NOME</label>
+									<input type="text" class="form-control" name="fullname" id="fullname" placeholder="Nome" required />
+								</div>
 
-              <div class="form-row">
-                <div class="form-group col">
-                  <label for="rne">RNE</label>
-                  <input type="text" class="form-control" name="rne" placeholder="RNE" required />
-                </div>
-                <div class="form-group col">
-                  <label for="celular">CELULAR <small>com DDD</small> </label>
-                  <input type="text" id="celular" class="form-control" name="celular" placeholder="Telefone" required />
-                </div>
-              </div>
-            
-              <div class="form-group">
-                <label for="Email">EMAIL</label>
-                <input type="email" class="form-control" name="Email" placeholder="Email" required />
-              </div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label for="met_rnemetodista">RNE</label>
+										<input type="text" class="form-control" id="met_rnemetodista" name="met_rnemetodista" placeholder="RNE" required />
+									</div>
+									<div class="form-group col">
+										<label for="mobilephone">CELULAR <small>com DDD</small> </label>
+										<input type="text" id="mobilephone" class="form-control" name="mobilephone" placeholder="Telefone" required />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="emailaddress1">EMAIL</label>
+									<input type="email" class="form-control" id="emailaddress1" name="emailaddress1" placeholder="Email" required />
+								</div>
+
+								<!-- ORIGEM - preenche que veio do formulário de leads -->
+								<input type="hidden" name="crmeduc_origem_cliente" id="crmeduc_origem_cliente" value="191.030.009" />
+								<!-- CAMPUS - Preenche com o valor da IE correspondente ou do EAD -->
+								<!--
+								Valores:
+								UNIMEP = 191.030.001
+								UMESP = 191.030.002
+								IPA = 191.030.003
+								IMIH = 191.030.000
+								IMG = 191.030.004
+								FMC = 191.030.005
+								EAD =  191.030.006
+								-->
+								<input type="hidden" name="crmeduc_campus_interesse" id="crmeduc_campus_interesse" value="" />
 
               <!------------------------- EAD ---------------------->          
               <div id="campos-ead">
                 <div class="form-group">
-                  <label for="cursosEad">CURSO:</label>
-                  <select class="form-control" id="cursosEad" name="cursosEad" required >
-                    <option value="" disabled selected>Selecione o curso</option>
-                    <option value="Administração">Administração</option>
-                    <option value="Análise e Desenvolvimento De Sistemas">Análise e Desenvolvimento de Sistemas</option>
-                    <option value="Ciências Contábeis">Ciências Contábeis</option>
-                    <option value="Ciência de Dados e Big Data">Ciência de Dados e Big Data</option>
-                    <option value="Comunicação Digital e Redes Sociais">Comunicação Digital e Redes Sociais</option>
-                    <option value="Educação Física (Bacharelado)">Educação Física (Bacharelado)</option>
-                    <option value="Educação Física (Licenciatura)">Educação Física (Licenciatura)</option>
-                    <option value="Gestão Ambiental">Gestão Ambiental</option>
-                    <option value="Gestão Comercial">Gestão Comercial</option>
-                    <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
-                    <option value="Gestão de Seguros">Gestão de Seguros</option>
-                    <option value="Gestão Financeira">Gestão Financeira</option>
-                    <option value="Gestão Pública">Gestão Pública</option>
-                    <option value="Jogos Digitais">Jogos Digitais</option>
-                    <option value="Jornalismo">Jornalismo</option>
-                    <option value="Logística">Logística</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Pedagogia">Pedagogia</option>
-                    <option value="Processos Gerenciais">Processos Gerenciais</option>
-                    <option value="Produção Audiovisual">Produção Audiovisual</option>
-                    <option value="Produção Multimídia">Produção Multimídia</option>
-                    <option value="Produção Publicitária">Produção Publicitária</option>
-                    <option value="Segurança Pública">Segurança Pública</option>
-                    <option value="Serviço Social">Serviço Social</option>
+										<label for="crmeduc_curso_interesse">CURSO:</label>
+										<select class="form-control" id="cursoEad" name="crmeduc_curso_interesse" required>
+											<option value="Default" disabled selected>Selecione o curso</option>
+                      <option value="33">Administração</option>
+                      <option value="2">Análise e Desenvolvimento de Sistemas</option>
+                      <option value="6">Ciências Contábeis</option>
+                      <option value="107">Ciência de Dados e Big Data</option>
+                      <option value="110">Comunicação Digital e Redes Sociais</option>
+                      <option value="120">Educação Física (Bacharelado)</option>
+                      <option value="111">Educação Física (Licenciatura)</option>
+                      <option value="113">Gestão Ambiental</option>
+                      <option value="103">Gestão Comercial</option>
+                      <option value="19">Gestão de Recursos Humanos</option>
+                      <option value="115">Gestão de Seguros</option>
+                      <option value="21">Gestão Financeira</option>
+                      <option value="116">Gestão Pública</option>
+                      <option value="117">Jogos Digitais</option>
+                      <option value="125">Jornalismo</option>
+                      <option value="24">Logística</option>
+                      <option value="25">Marketing</option>
+                      <option value="26">Pedagogia</option>
+                      <option value="27">Processos Gerenciais</option>
+                      <option value="104">Produção Audiovisual</option>
+                      <option value="134">Produção Multimídia</option>
+                      <option value="108">Produção Publicitária</option>
+                      <option value="112">Segurança Pública</option>
+                      <option value="31">Serviço Social</option>
                   </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="poloEad">POLO:</label>
-                  <select class="form-control" id="poloEad" name="poloEad" required>
-                    <option value="" disabled selected>Selecione o polo</option>
-                  </select> 
                 </div>
 
               </div>
@@ -123,30 +131,17 @@
               <div id="campos-presencial">
                 <div class="form-group">
                   <label for="cursosPresencial">CURSO:</label>
-                  <select class="form-control" id="cursosPresencial" name="cursosPresencial" required >
-                    <option value="" disabled selected>Selecione o curso</option>
-                    <option value="Ciências Contábeis">Ciências Contábeis</option>
-                    <option value="Direito">Direito</option>
-                    <option value="Educação Física">Educação Física</option>
-                    <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
-                    <option value="Logística">Logística</option>
+										<select class="form-control" id="cursosPresencial" name="crmeduc_curso_interesse" required>
+											<option value="Default" disabled selected>Selecione o curso</option>
+                      <option value="6">Ciências Contábeis</option>
+                      <option value="8">Direito</option>
+                      <option value="10">Educação Física</option>
+                      <option value="19">Gestão de Recursos Humanos</option>
+                      <option value="24">Logística</option>
                   </select>
                 </div>
 
-                <div class="form-group">
-                  <label for="campusPresencial">CAMPUS:</label>
-                  <select class="form-control" id="campusPresencial" name="campusPresencial" required>
-                    <option value="" disabled selected>Selecione o campus</option>
-                  </select>
-                </div>
-
-              
-                <div class="form-group">
-                  <label for="turnoPresencial">TURNO:</label>
-                  <select class="form-control" id="turnoPresencial" name="turnoPresencial" required>
-                    <option value="" disabled selected>Selecione o Turno</option>
-                  </select>
-                </div>
+                
 
               </div> 
               <input type="submit" class="btn btn-primary enviar" value="Enviar"></input>    
@@ -171,72 +166,16 @@
     </div>
   </div>
 
-<!-- Scripts -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"></script>
+	<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+
   <script src="./assets/js/centenario.js"></script>
   <script src="./assets/js/validator.js"></script>
-  
-<!--Verificação e mudança dos Campos Obrigatórios -->
-  <script>
-    $("form").parsley();
-    $("[name=modalidade]").on('change', function () {
-      // Verifica qual opção escolhida
-      var val = $(this).val();
-
-      switch (val) {
-          case 'EAD':
-            $("[name=cursosEad]").attr("required", "required");
-            $("[name=poloEad]").attr("required", "required");
-            $("[name=cursosPresencial]").removeAttr("required");
-            $("[name=campusPresencial]").removeAttr("required");
-            $("[name=turnoPresencial]").removeAttr("required");
-            break;
-          case 'Presencial':
-            $("[name=cursosEad]").removeAttr("required");
-            $("[name=poloEad]").removeAttr("required");
-            $("[name=cursosPresencial]").attr("required", "required");
-            $("[name=campusPresencial]").attr("required", "required");
-            $("[name=turnoPresencial]").attr("required", "required");
-            break;
-      }
-      $("[name=modalidades]").removeAttr("required");
-      $("form").parsley().reset();
-    });
-  </script>
-
-<!-- Exibe campos corretos -->
-  <script>
-    function show1(){
-      document.getElementById('campos-presencial').style.display ='none';
-      document.getElementById('campos-ead').style.display ='block';
-    }
-  function show2(){
-    document.getElementById('campos-ead').style.display ='none';
-    document.getElementById('campos-presencial').style.display ='block';
-  }
-  </script>
-
-<!-- Máscara DDD -->
-  <script>
-    function inputHandler(masks, max, event) {
-      var c = event.target;
-      var v = c.value.replace(/\D/g, "");
-      var m = c.value.length > max ? 1 : 0;
-      VMasker(c).unMask();
-      VMasker(c).maskPattern(masks[m]);
-      c.value = VMasker.toPattern(v, masks[m]);
-    }
-      var telMask = ["(99) 9999-99999", "(99) 99999-9999"];
-      var tel = document.querySelector("input#celular");
-      VMasker(tel).maskPattern(telMask[0]);
-      tel.addEventListener(
-        "input",
-        inputHandler.bind(undefined, telMask, 14),
-        false
-      );
-
-  </script>
+ <script>
+			$("form").parsley();
+		</script>
 </body>
 </html>

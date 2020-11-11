@@ -8,7 +8,7 @@
     <meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet"/>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
-    <link rel="stylesheet" href="./assets/css/style_css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -90,8 +90,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <small>(Presencial)</small></a></li>-->
                       <li class="mod"><a href="http://granbery.inscricao.crmeducacional.com/login/7501" target="_blank" class="btn btn-up">Prova Online</a></li>
                       <li class="mod"><a href="http://granbery.inscricao.crmeducacional.com/login/2501" target="_blank" class="btn btn-up">ENEM</a></li>
-                      <!-- <li class="mod"><a href="http://granbery.inscricao.crmeducacional.com/login/4501" target="_blank" class="btn btn-up">Segunda Graduação</a></li> -->
-                      <!-- <li class="mod"><a href="http://granbery.inscricao.crmeducacional.com/login/3501" target="_blank" class="btn btn-up">Transferência</a></li> -->
+                      <li class="mod"><a href="http://granbery.inscricao.crmeducacional.com/login/4501" target="_blank" class="btn btn-up">Segunda Graduação</a></li> 
+                       <li class="mod"><a href="http://granbery.inscricao.crmeducacional.com/login/3501" target="_blank" class="btn btn-up">Transferência</a></li>
                       <!-- <li class="mod">Segunda Licenciatura</li>  -->
                     </ul>
                   </div>
@@ -114,18 +114,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <small>(Presencial)</small></a></li>-->
                       <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/6601" target="_blank" class="btn btn-up">Prova Online</a></li>
                       <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/6201" target="_blank" class="btn btn-up">ENEM</a></li>
-                      <!-- <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/4101" target="_blank" class="btn btn-up">Segunda Graduação</a></li> -->
-                      <!-- <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/5101" target="_blank" class="btn btn-up">Segunda Licenciatura</a></li> -->
+                       <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/6401" target="_blank" class="btn btn-up">Segunda Graduação</a></li> 
+                       <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/6501" target="_blank" class="btn btn-up">Segunda Licenciatura</a></li>
                       <!--<li class="mod"><a href="#" target="_blank" class="btn btn-up"></a></li>-->
-                      <!-- <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/6301" target="_blank" class="btn btn-up">Transferência</a></li> -->
+                       <li class="mod"><a href="http://ead.inscricao.crmeducacional.com/login/6301" target="_blank" class="btn btn-up">Transferência</a></li> 
+                       <li class="mod"><a href="#openModal" class="btn btn-up">Bolsa Social</a></li>
                     </ul>
                   </div>
                   <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-sm-6 col-md-6">
+                   <div class="col-12 col-sm-6 col-md-3">
                       <a href="#" title="Em breve">Sou Estrangeiro</a>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-6">
-                      <a href="https://metodista.br/processoseletivo/edital-ead-2021.pdf" title="Edital">Edital</a>
+                      <div class="col-12 col-sm-6 col-md-4">
+                      <a href="https://metodista.br/processoseletivo/edital-ead-2021.pdf" title="Edital">Edital Graduação</a>
+                    </div>
+                     <div class="col-12 col-sm-6 col-md-5">
+                      <a href="https://metodista.br/processoseletivo/assets/edital-segunda-licenciatura.pdf/" title="Edital">Edital Segunda Licenciatura</a>
                     </div>
                   </div>
                 </section>
@@ -153,9 +157,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+  <!-- modal bolsa social -->
+  <div id="openModal" class="modalDialog">
+    <div>	
+      <a href="#close" title="Close" class="close">X</a>
+      <a href="#" class="modal-link">Não sou aluno</a>
+      <a class="toggle modal-link">Já sou aluno</a>
+      <div id="target">
+        <p>Para maiores informações, entre em contato pelo e-mail: email@email.com.br</p>
+      </div>
+    </div>
+  </div>
+
 <!-- Scripts -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
-  <!-- <script src="./assets/js/script.js"></script> -->
+  <script>
+    $('.toggle').click(function() {
+      $('#target').toggle('slow');
+    });
+  </script>
 </body>
 </html>

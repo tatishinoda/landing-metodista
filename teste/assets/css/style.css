@@ -546,7 +546,7 @@ input[type=radio]:checked ~ .check::before{
     top: 50%;
   }
 }
-/**/
+/* MODAL */
 .modalDialog {
     position: fixed;
     color:#000;

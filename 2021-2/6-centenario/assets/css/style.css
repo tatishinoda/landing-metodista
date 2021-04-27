@@ -86,7 +86,7 @@ a:hover, a:focus{
 }
 
 #home {
-	background: var(--bg-verde) url(../images/bg.png) no-repeat;
+	background: var(--bg-verde) url(https://metodista.netlify.app/2021-2/6-centenario/assets/images/bg.png) no-repeat;
 	background-size: cover;
 	background-position: 0 38%;
 	background-attachment: fixed;
@@ -142,14 +142,14 @@ a:hover, a:focus{
 }
 
 #presencial {
-	background: rgb(0,162,74) url(../images/gradient.png) no-repeat;
+	background: rgb(0,162,74) url(https://metodista.netlify.app/2021-2/6-centenario/assets/images/gradient.png) no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 }
 
 #ead {
-	background: rgb(0,162,74) url(../images/gradient.png) no-repeat;
+	background: rgb(0,162,74) url(https://metodista.netlify.app/2021-2/6-centenario/assets/images/gradient.png) no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;

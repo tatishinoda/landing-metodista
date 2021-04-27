@@ -87,7 +87,7 @@ a:hover, a:focus{
 }
 
 #home {
-	background: #003488 url(../images/bg.png) no-repeat;
+	background: #003488 url(https://metodista.netlify.app/2021-2/4-izabela/assets/images/bg.png) no-repeat;
 	background-size: cover;
 	background-position: 0 38%;
 	background-attachment: fixed;
@@ -143,14 +143,14 @@ a:hover, a:focus{
 }
 
 #presencial {
-	background: #003488 url(../images/gradient.png) no-repeat;
+	background: #003488 url(https://metodista.netlify.app/2021-2/4-izabela/assets/images/gradient.png) no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 }
 
 #ead {
-	background: #003488 url(../images/gradient.png) no-repeat;
+	background: #003488 url(https://metodista.netlify.app/2021-2/4-izabela/assets/images/gradient.png) no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;

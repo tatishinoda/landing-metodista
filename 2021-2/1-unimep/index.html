@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Universidade Metodista de Piracicaba | Processo Seletivo 2021 - Inscrições Gratuitas</title>
+	<meta name="description" content="Universidade Metodista de Piracicaba | Processo Seletivo 2021 - Inscrições Gratuitas" />
+	<meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos" />
+
+	<link rel="stylesheet" href="assets/css/fullpage.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3577752-5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-3577752-5');
+	</script>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-WSLF5BR');</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSLF5BR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<img src="assets/images/logo.png" alt="Universidade Metodista de Piracicaba" class="img-logo">
+			<h1 style="display: none;">Universidade Metodista de Piracicaba</h1>
+		</div>
+	</header>
+	<main>
+		<div id="fullpage">
+			<div class="section" id="home">
+				<div class="section-content">
+					<div class="content">
+						<h2>Escolha a modalidade de ensino</h2>
+						<div class="botoes">
+							<a href="#presencial" class="btn btn-up" title="Presencial">Presencial</a>
+							<a href="#ead" class="btn btn-up" title="A Distância">EAD</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section" id="presencial">
+				<div class="section-content centered">
+					<div class="container">
+						<header>
+							<h2>Presencial</h2>
+						</header>
+						<ul class="ingresso">
+
+							<li class="mod"><a href="#" target="_blank" class="btn" title="Prova Online">Prova Online</a></li>
+							<li class="mod"><a href="#" target="_blank" class="btn" title="ENEM">ENEM</a></li>
+							<li class="mod"><a href="#" target="_blank" class="btn" title="Segunda Graduação">Segunda Graduação</a></li>
+							<li class="mod"><a href="#" target="_blank" class="btn" title="Transferência">Transferência</a></li>
+
+						</ul>
+						<footer>
+							<div>
+								<a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a>
+							</div>
+							<div>
+								<a href="#" target="_blank" title="Edital">Edital</a>
+							</div>
+						</footer>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="section" id="ead">
+
+				<div class="section-content centered">
+					<div class="container">
+						<header>
+							<h2>EAD</h2>
+						</header>
+						<ul class="ingresso">
+
+							<li class="mod"><a href="#" target="_blank" class="btn" title="Prova Online">Prova Online</a></li>
+							<li class="mod"><a href="#" target="_blank" class="btn" title="ENEM">ENEM</a></li>
+							<li class="mod"><a href="#" target="_blank" class="btn" title="Segunda Graduação">Segunda Graduação</a></li>
+							<li class="mod"><a href="#" target="_blank" class="btn" title="Transferência">Transferência</a></li>
+
+						</ul>
+						<footer>
+							<div>
+								<a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a>
+							</div>
+							<div>
+								<a href="#" target="_blank" title="Edital">Edital</a>
+							</div>
+						</footer>
+					</div>
+
+				</div>
+			</div>
+	</main>
+
+
+	<script>
+		$(function () {
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+	</script>
+
+	<!-- <script>
+	// Get the modal
+var ebModal = document.getElementById('formEstrangeirosModal');
+
+// Get the button that opens the modal
+var ebBtn = document.getElementById("formEstrangeiros");
+
+// Get the <span> element that closes the modal
+var ebSpan = document.getElementsByClassName("ebcf_close")[0];
+
+// When the user clicks the button, open the modal 
+ebBtn.onclick = function() {
+    ebModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+ebSpan.onclick = function() {
+    ebModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == ebModal) {
+        ebModal.style.display = "none";
+    }
+}
+</script> -->
+
+</body>
+
+</html>

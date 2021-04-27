@@ -571,7 +571,7 @@ input[type=radio]:checked ~ .check::before{
     max-width: 550px;
     position: relative;
     margin: 20vh auto;
-    padding: 30px 20px 30px 20px;
+    padding: 30px 20px 15px 20px;
     border-radius: 10px;
     background:rgba(255,255, 255, 0.99);
     
@@ -591,28 +591,27 @@ input[type=radio]:checked ~ .check::before{
     -moz-border-radius: 12px;
     border-radius: 12px;
 }
-.modal-link{
+.accordion {
   cursor: pointer;
-  color:var(--azul);
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size:25px;
   font-weight: bold;
-  display: block;
-  text-align:center;
-  line-height: 3;
-  font-size: 2rem;
+  color:var(--azul2);
 }
-a.toggle.modal-link:hover{
-  text-decoration: underline;
-  color: var(--link2);
+.active, .accordion:hover {
+  background-color: transparent;
 }
-#target {
-  
-  width:90%;
-  height:auto;
-  padding:5px;
-  margin: 0 auto;
-  display:none;
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
-.Hide{
-  display:none;
+.panel a, .modalDialog a{
+    color: var(--umesp);
 }
-

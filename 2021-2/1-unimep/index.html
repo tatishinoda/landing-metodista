@@ -222,7 +222,7 @@
 													<input type="email" class="form-control" id="emailaddress1" name="emailaddress1" placeholder="Email" required />
 												</div>
 
-												<input type="hidden" name="crmeduc_origem_cliente" id="crmeduc_origem_cliente" value="191.030.009" />
+												<input type="hidden" name="crmeduc_origem_cliente" id="crmeduc_origem_cliente" value="191.030.006" />
 
 												<div id="campos-ead">
 													<div class="form-group">
@@ -301,7 +301,27 @@
 			});
 		});
 	</script>
+<script>
+//Submit Form
+   // this is the id of the form
+   $("#form-estrangeiro").submit(function (e) {
+      e.preventDefault(); // avoid to execute the actual submit of the form.
 
+      var form = $(this);
+      var url = form.attr("action");
+
+      $.ajax({
+         type: "POST",
+         url: url,
+         data: form.serialize(), // serializes the form's elements.
+         success: function () {
+            alert("Dados Enviados com Sucesso"); // show response from the php script.
+            $('#form-estrangeiro')[0].reset();
+         }
+      });
+   });
+
+</script>
 
 
 </body>

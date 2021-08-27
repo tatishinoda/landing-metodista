@@ -19,7 +19,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 body{
-	background: url('images/gradient.png') no-repeat;
+	background: url('http://unimep.edu.br/processoseletivo/assets/images/gradient.png') no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -53,7 +53,7 @@ p {
 	width:100%;
 }
 
-.bg-image .desktop{	
+.bg-image .desktop{
     max-width: 100%;
     width: 100vw;
     margin: 0 auto;
@@ -61,7 +61,7 @@ p {
 
 
 .st-deco.logo {
-	background: url('images/gradient.png') no-repeat;
+	background: url('http://unimep.edu.br/processoseletivo/assets/images/gradient.png') no-repeat;
 	background-size: cover;
 	z-index: 9;
 	width: 100%;
@@ -75,7 +75,7 @@ p {
 .tag{
 	max-width: 300px;
 	width: 100%;
-	
+
 }
 .logo-img{
 	max-width: 200px;
@@ -99,14 +99,14 @@ p {
 	font-weight: 900;
 	font-size: 1.2rem;
 	letter-spacing: 2px;
-	
+
 }
 .tabs span{
 	color: var(--preto);
-	
+
 }
 .tab-box {
-	
+
 	padding: .5rem;
 	width: 100%;
 	height: 100%;
@@ -181,12 +181,12 @@ ul.list {
 	flex-wrap: wrap;
 }
 .list-item {
-	
+
 	display: flex;
 	justify-content: center;
-	flex: 20%;
+
 	align-items: stretch;
-	width: 100%;
+
 	margin: 10px;
 
 }
@@ -220,14 +220,14 @@ a.link {
 	position: fixed;
 	bottom: 120px;
 	right: 100px;
-	z-index: 99; 
+	z-index: 99;
 	text-align: center;
 	color: var(--branco);
 	cursor: pointer;
 	padding: 10px;
-	border-radius: 10px; 
+	border-radius: 10px;
  }
- 
+
 #myBtn a{
 	color: var(--branco);
 	display: block;
@@ -252,7 +252,7 @@ a.link {
 	transform: rotate(-135deg);
 	-webkit-transform: rotate(-135deg);
  }
-  
+
  /* FORM */
  .form-group {
 	display: flex;
@@ -315,7 +315,7 @@ input.btn.btn-primary.enviar {
 @media screen and (max-width: 981px) {
 	.desktop{display: none;}
 	.mobile{display: block;}
-	.bg-image .mobile{	
+	.bg-image .mobile{
 		max-width: 100%;
 		width: 80%;
 		margin: 0 auto;
@@ -329,7 +329,7 @@ input.btn.btn-primary.enviar {
 		font-size: 42px;
 		margin-top: 50px;
 	}
-	.tabs{	
+	.tabs{
 		flex: 1;
 		flex-direction: column;
 		justify-content: center;
@@ -357,7 +357,7 @@ input.btn.btn-primary.enviar {
 }
 /* MODAL FORMS */
 
- 
+
  /* modal */
  @keyframes fade-in {
 	0% {
@@ -376,7 +376,7 @@ input.btn.btn-primary.enviar {
 	background: rgba(0, 0, 0, 0.4);
 	display: none;
  }
- 
+
  /* display the modal overlay when the input[type=radio] is checked */
  .modal__state:checked + .modal__overlay {
 	opacity: 1;
@@ -384,7 +384,7 @@ input.btn.btn-primary.enviar {
 	display: block;
 	z-index: 9;
  }
- 
+
  @keyframes scoot-up {
 	0% {
 	  margin-top: 80px;
@@ -405,7 +405,7 @@ input.btn.btn-primary.enviar {
 	z-index: 9999999;
 	overflow: auto;
 }
- .modal__state:checked + .modal__overlay .modal {	
+ .modal__state:checked + .modal__overlay .modal {
     animation: scoot-up 0.2s;
     animation-timing-function: ease-out;
     transform-origin: 50% 0px;
@@ -414,13 +414,13 @@ input.btn.btn-primary.enviar {
     justify-content: center;
     align-items: center;
  }
- 
+
  .modal__close {
 	position: absolute;
 	top: 40px;
 	right: 20px;
  }
- 
+
  .modal__overlay-close {
 	height: 100%;
 	width: 100%;
@@ -428,12 +428,12 @@ input.btn.btn-primary.enviar {
 	left: 0;
 	top: 0;
  }
- 
+
  /* the input[type=radio] that's toggled when the label is clicked */
  .modal__state {
 	display: none;
  }
- 
+
  /* button styles */
  .button {
 	color: var(--contrast);
@@ -442,25 +442,104 @@ input.btn.btn-primary.enviar {
 	transition: .7s ease;
 	font-weight: normal;
 }
- 
+
  .button:hover, .button:focus {
 	cursor: pointer;
 	text-decoration: underline;
-	
+
  }
- 
+
  .button:active {
 	margin-top: 4px;
 	margin-bottom: -4px;
 	box-shadow: 0 0 0 #ACCFCC;
  }
- 
+
  /* close button */
  .button--close {
-	padding: 0.2em 0.5em;	
+	padding: 0.2em 0.5em;
 	color: #000;
  }
 
 
 
 
+
+/* MODAL BOLSA*/
+.modalDialog {
+    position: fixed;
+    color:#000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    margin: 20vh auto;
+    padding: 30px 20px 15px 20px;
+    border-radius: 10px;
+    background:rgba(255,255, 255, 0.99);
+
+}
+.close {
+    color: #000;
+    line-height: 20px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 20px;
+    font-size:15px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size:25px;
+  font-weight: bold;
+  color:var(--preto);
+}
+
+.active, .accordion:hover {
+  background-color: transparent;
+  color: var(--hover);
+}
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.panel a, .modalDialog a{
+    color: var(--shadow);
+	 font-size: 1rem;
+}
+.panel p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--preto);
+}

@@ -9,16 +9,119 @@
 	<meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos" />
 
 	<link rel="stylesheet" href="http://ipametodista.edu.br/processoseletivo/assets/style_css">
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	
+
+
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-N7DB3T3');</script>
+	<!-- End Google Tag Manager -->
 
+	<style>
+		/* MODAL BOLSA*/
+		.modalDialog {
+			position: fixed;
+			color: #000;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.8);
+			z-index: 99999;
+			opacity: 0;
+			-webkit-transition: opacity 400ms ease-in;
+			-moz-transition: opacity 400ms ease-in;
+			transition: opacity 400ms ease-in;
+			pointer-events: none;
+		}
+
+		.modalDialog:target {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		.modalDialog>div {
+			width: 90%;
+			max-width: 550px;
+			position: relative;
+			margin: 20vh auto;
+			padding: 30px 20px 15px 20px;
+			border-radius: 10px;
+			background: rgba(255, 255, 255, 0.99);
+
+		}
+
+		.close {
+			color: #000;
+			line-height: 20px;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 20px;
+			font-size: 15px;
+			text-decoration: none;
+			font-weight: bold;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+		}
+
+		.accordion {
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			text-align: center;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			font-size: 25px;
+			font-weight: bold;
+			color: var(--preto);
+		}
+
+		.active,
+		.accordion:hover {
+			background-color: transparent;
+			color: var(--hover);
+		}
+
+		.panel {
+			padding: 0 18px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+
+		.panel a,
+		.modalDialog a {
+			color: var(--shadow);
+			font-size: 1rem;
+		}
+
+		.panel p {
+			text-align: center;
+			font-size: 16px;
+			line-height: 22px;
+			color: var(--preto);
+		}
+	</style>
 </head>
 
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7DB3T3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<div class="container">
 		<div class="st-container">
 			<div class="st-deco logo">
@@ -50,9 +153,14 @@
 							<ul class="list">
 								<li class="list-item">
 									<a href="http://ipa.inscricao.crmeducacional.com/login/2302" target="_blank" class="link" title="ENEM">
-										<div class="list-content">ENEM</div>
+										<div class="list-content">&nbsp;&nbsp;&nbsp; ENEM &nbsp;&nbsp;&nbsp;</div>
 									</a>
 								</li>
+								<!-- <li class="list-item">
+									<a href="#openModal" class="link" title="Bolsa Social">
+										<div class="list-content">Bolsa Social</div>
+									</a>
+								</li> -->
 								<li class="list-item">
 									<a href="http://ipa.inscricao.crmeducacional.com/login/7302" target="_blank" class="link" title="Prova Online">
 										<div class="list-content">Prova Online</div>
@@ -72,9 +180,52 @@
 
 
 						</div>
+
+						<!-- MODAL BOLSA -->
+						<div id="openModal" class="modalDialog">
+							<div>
+								<a href="#close" title="Close" class="close">X</a>
+								<button class="accordion">Quero ser aluno</button>
+								<div class="panel">
+									<div class="container">
+										<div>
+											<p>Participe da Bolsa Social:</p>
+										</div>
+
+										<div class="ingresso">
+
+											<a class="list-item" href="http://ipa.inscricao.crmeducacional.com/login/9303" target="_blank">Com sua nota do Enem</a>
+										</div>
+										<div class="ingresso">
+											<a class="list-item" href="http://ipa.inscricao.crmeducacional.com/login/8303" target="_blank">Redação
+												On-line</a>
+										</div>
+									</div>
+								</div>
+
+								<button class="accordion">Já sou aluno</button>
+								<div class="panel">
+									<div>
+										<div>
+											<p>Aguardar o processo seletivo da Bolsa Social para Veteranos, que será aberto posteriormente</p>
+										</div>
+									</div>
+								</div>
+								<footer>
+									<div>
+										<a href="http://ipametodista.edu.br/processoseletivo/bolsa-social-ipa-presencial2021.pdf" target="_blank">Edital</a>
+									</div>
+								</footer>
+							</div>
+						</div>
+
+
+
+
+
 						<footer>
 							<div>
-								<a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a>
+								<!-- <a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a> -->
 							</div>
 							<div>
 								<a href="http://ipametodista.edu.br/processoseletivo/IPA_EditalProcessoSeletivo2021.pdf" target="_blank" title="Edital">Edital</a>
@@ -92,9 +243,14 @@
 							<ul class="list">
 								<li class="list-item">
 									<a href="http://ead.inscricao.crmeducacional.com/login/6202" target="_blank" class="link" title="ENEM">
-										<div class="list-content">ENEM</div>
+										<div class="list-content">&nbsp;&nbsp;&nbsp; ENEM &nbsp;&nbsp;&nbsp;</div>
 									</a>
 								</li>
+								<!-- <li class="list-item">
+									<a href="#openModal2" class="link" title="Bolsa Social">
+										<div class="list-content">Bolsa Social</div>
+									</a>
+								</li> -->
 								<li class="list-item">
 									<a href="http://ead.inscricao.crmeducacional.com/login/6602" target="_blank" class="link" title="Prova Online">
 										<div class="list-content">Prova Online</div>
@@ -111,12 +267,51 @@
 									</a>
 								</li>
 							</ul>
-
-
 						</div>
+
+
+						<!-- MODAL BOLSA -->
+						<div id="openModal2" class="modalDialog">
+							<div>
+								<a href="#close" title="Close" class="close">X</a>
+								<button class="accordion">Quero ser aluno</button>
+								<div class="panel">
+									<div class="container">
+										<div>
+											<p>Participe da Bolsa Social:</p>
+										</div>
+
+										<div class="ingresso">
+
+											<a class="list-item" href="http://ead.inscricao.crmeducacional.com/login/6703" target="_blank">Com sua nota do Enem</a>
+										</div>
+										<div class="ingresso">
+											<a class="list-item" href="http://ead.inscricao.crmeducacional.com/login/6803" target="_blank">Redação
+												On-line</a>
+										</div>
+									</div>
+								</div>
+
+								<button class="accordion">Já sou aluno</button>
+								<div class="panel">
+									<div>
+										<div>
+											<p>Aguardar o processo seletivo da Bolsa Social para Veteranos, que será aberto posteriormente</p>
+										</div>
+									</div>
+								</div>
+								<footer>
+									<div>
+										<a href="https://metodista.br/processoseletivo/editais/edital-bolsa-social-EAD2021-2.pdf" target="_blank">Edital</a>
+									</div>
+								</footer>
+							</div>
+						</div>
+
+
 						<footer>
 							<div>
-								<a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a>
+								<!-- <a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a> -->
 							</div>
 							<!-- <div>
 								<div>
@@ -238,7 +433,7 @@
 				scrNav();
 			});
 
-			// scrNav function 
+			// scrNav function
 			// Change active dot according to the active section in the window
 			function scrNav() {
 				var sTop = $(window).scrollTop();
@@ -256,7 +451,7 @@
 		});
 	</script>
 	<script>
-		//MODAL 
+		//MODAL
 
 		$("#modal__state").change(function () {
 			$(".tabs").toggle();
@@ -296,6 +491,23 @@
 				}
 			});
 		});
+	</script>
+	<!-- SCRIPT MODAL BOLSA -->
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		}
 	</script>
 
 </body>

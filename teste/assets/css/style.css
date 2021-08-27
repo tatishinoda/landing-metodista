@@ -6,7 +6,7 @@
   --fames:   #006F3D;
   --unimep:  #FCAB40;
   --ipa:     #E5A912;
-  
+
   /*basicas */
   --branco: #e2e2e2;
   --preto:  #121212;
@@ -20,7 +20,7 @@
   --link3:#ED1C24;
   --link4:#8B0304;
   --link5:#00682b;
-  
+
 }
 
 /* Geral */
@@ -97,7 +97,7 @@ a:hover{
 }
 
  /*Page - Vestibular */
- 
+
 .tab-container {
   align-self: flex-end;
   justify-content: center;
@@ -112,12 +112,12 @@ a:hover{
   text-align: center;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.5);
-  
+
 }
 @media (max-width: 991.98px) {
   .tabs {
     margin-top: 20px;
-   
+
   }
 }
 .tabs h3 {
@@ -468,7 +468,7 @@ input[type=radio]:checked ~ .check::before{
 }
 #form-estrangeiro .enviar{
   background: var(--azul);
-  border: none; 
+  border: none;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -520,12 +520,12 @@ input[type=radio]:checked ~ .check::before{
   .tabs {
     background:transparent;
   }
-  
+
 }
 @media (max-width: 558px){
   img.topo-mobile {
     padding-top: 95px;
-  }  
+  }
   .stripes {
     height: 1500px;
   }
@@ -536,82 +536,13 @@ input[type=radio]:checked ~ .check::before{
 @media (max-width: 450px){
   img.topo-mobile {
     padding-top: 120px;
-  } 
+  }
   .tabs {
     background:transparent;
-  } 
+  }
 }
 @media (max-height: 767px){
 .push-down {
     top: 50%;
   }
-}
-/* MODAL */
-.modalDialog {
-    position: fixed;
-    color:#000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background:transparent;
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog > div {
-    width: 90%;
-    max-width: 550px;
-    position: relative;
-    margin: 20vh auto;
-    padding: 30px 20px 15px 20px;
-    border-radius: 10px;
-    background:rgba(255,255, 255, 0.99);
-    
-}
-.close {
-    color: #000;
-    line-height: 20px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: 20px;
-    font-size:15px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-}
-.accordion {
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: center;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-  font-size:25px;
-  font-weight: bold;
-  color:var(--azul2);
-}
-.active, .accordion:hover {
-  background-color: transparent;
-}
-.panel {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-.panel a, .modalDialog a{
-    color: var(--umesp);
 }

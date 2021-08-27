@@ -5,19 +5,123 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>Centro Universitário Metodista Izabela Hendrix | Processo Seletivo 2021 - Inscrições Gratuitas</title>
-    <meta name="description" content="Centro Universitário Metodista Izabela Hendrix | Processo Seletivo 2021 - Inscrições Gratuitas"/>
-    <meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos"/>
+	<meta name="description" content="Centro Universitário Metodista Izabela Hendrix | Processo Seletivo 2021 - Inscrições Gratuitas" />
+	<meta name="keywords" content="universidade, metodista, vestibular, universidade metodista, bolsa de estudos" />
 
-	 <link rel="stylesheet" href="http://izabelahendrix.edu.br/processoseletivo/assets/style_css">
-	 <link rel="stylesheet" type="text/css" href="style.css" />
-	
+	<link rel="stylesheet" href="http://izabelahendrix.edu.br/processoseletivo/assets/style_css">
+	<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-PJL3RZN');</script>
+	<!-- End Google Tag Manager -->
+
+	<style>
+		/* MODAL BOLSA*/
+		.modalDialog {
+			position: fixed;
+			color: #000;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.8);
+			z-index: 99999;
+			opacity: 0;
+			-webkit-transition: opacity 400ms ease-in;
+			-moz-transition: opacity 400ms ease-in;
+			transition: opacity 400ms ease-in;
+			pointer-events: none;
+		}
+
+		.modalDialog:target {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		.modalDialog>div {
+			width: 90%;
+			max-width: 550px;
+			position: relative;
+			margin: 20vh auto;
+			padding: 30px 20px 15px 20px;
+			border-radius: 10px;
+			background: rgba(255, 255, 255, 0.99);
+
+		}
+
+		.close {
+			color: #000;
+			line-height: 20px;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 20px;
+			font-size: 15px;
+			text-decoration: none;
+			font-weight: bold;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+		}
+
+		.accordion {
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			text-align: center;
+			border: none;
+			outline: none;
+			transition: 0.4s;
+			font-size: 25px;
+			font-weight: bold;
+			color: var(--preto);
+		}
+
+		.active,
+		.accordion:hover {
+			background-color: transparent;
+			color: var(--hover);
+		}
+
+		.panel {
+			padding: 0 18px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+
+		.panel a,
+		.modalDialog a {
+			color: var(--shadow);
+			font-size: 1rem;
+		}
+
+		.panel p {
+			text-align: center;
+			font-size: 16px;
+			line-height: 22px;
+			color: var(--preto);
+		}
+	</style>
 
 </head>
 
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJL3RZN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<div class="container">
 		<div class="st-container">
 			<div class="st-deco logo">
@@ -48,10 +152,15 @@
 						<div class="ingresso">
 							<ul class="list">
 								<li class="list-item">
-									<a href="http://izabelahendrix.inscricao.crmeducacional.com/login/3402" target="_blank" class="link" title="ENEM">
-										<div class="list-content">ENEM</div>
+									<a href="http://izabelahendrix.inscricao.crmeducacional.com/login/2402" target="_blank" class="link" title="ENEM">
+										<div class="list-content">&nbsp;&nbsp;&nbsp; ENEM &nbsp;&nbsp;&nbsp;</div>
 									</a>
 								</li>
+								<!-- <li class="list-item">
+									<a href="#openModal" class="link" title="Bolsa Social">
+										<div class="list-content">Bolsa Social</div>
+									</a>
+								</li> -->
 								<li class="list-item">
 									<a href="http://izabelahendrix.inscricao.crmeducacional.com/login/7402" target="_blank" class="link" title="Prova Online">
 										<div class="list-content">Prova Online</div>
@@ -71,9 +180,50 @@
 
 
 						</div>
+						<!-- MODAL BOLSA -->
+						<div id="openModal" class="modalDialog">
+							<div>
+								<a href="#close" title="Close" class="close">X</a>
+								<button class="accordion">Quero ser aluno</button>
+								<div class="panel">
+									<div class="container">
+										<div>
+											<p>Participe da Bolsa Social:</p>
+										</div>
+
+										<div class="ingresso">
+
+											<a class="list-item" href="http://izabelahendrix.inscricao.crmeducacional.com/login/9403" target="_blank">Com sua nota do Enem</a>
+										</div>
+										<div class="ingresso">
+											<a class="list-item" href="http://izabelahendrix.inscricao.crmeducacional.com/login/8403" target="_blank">Redação
+												On-line</a>
+										</div>
+									</div>
+								</div>
+
+								<button class="accordion">Já sou aluno</button>
+								<div class="panel">
+									<div>
+										<div>
+											<p>Aguardar o processo seletivo da Bolsa Social para Veteranos, que será aberto posteriormente</p>
+										</div>
+									</div>
+								</div>
+								<footer>
+									<div>
+										<a href="http://izabelahendrix.edu.br/processoseletivo/editais/edital-bolsa-social-imih-2021-2.pdf/" target="_blank">Edital</a>
+									</div>
+								</footer>
+							</div>
+						</div>
+
+
+
+
 						<footer>
 							<div>
-								<a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a>
+								<!-- <a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a> -->
 							</div>
 							<div>
 								<a href="http://izabelahendrix.edu.br/processoseletivo/editais/IZABELA_Edital_ProcessoSeletivo2021.pdf" target="_blank" title="Edital">Edital</a>
@@ -91,9 +241,14 @@
 							<ul class="list">
 								<li class="list-item">
 									<a href="http://ead.inscricao.crmeducacional.com/login/6202" target="_blank" class="link" title="ENEM">
-										<div class="list-content">ENEM</div>
+										<div class="list-content">&nbsp;&nbsp;&nbsp; ENEM &nbsp;&nbsp;&nbsp;</div>
 									</a>
 								</li>
+								<!-- <li class="list-item">
+									<a href="#openModal2" class="link" title="Bolsa Social">
+										<div class="list-content">Bolsa Social</div>
+									</a>
+								</li> -->
 								<li class="list-item">
 									<a href="http://ead.inscricao.crmeducacional.com/login/6602" target="_blank" class="link" title="Prova Online">
 										<div class="list-content">Prova Online</div>
@@ -109,13 +264,56 @@
 										<div class="list-content">Transferência</div>
 									</a>
 								</li>
+								<li class="list-item">
+									<a href="http://ead.inscricao.crmeducacional.com/login/6502" target="_blank" class="link" title="Segunda Licenciatura">
+										<div class="list-content">Segunda Licenciatura</div>
+									</a>
+								</li>
 							</ul>
-
-
 						</div>
+
+						<!-- MODAL BOLSA -->
+						<div id="openModal2" class="modalDialog">
+							<div>
+								<a href="#close" title="Close" class="close">X</a>
+								<button class="accordion">Quero ser aluno</button>
+								<div class="panel">
+									<div class="container">
+										<div>
+											<p>Participe da Bolsa Social:</p>
+										</div>
+
+										<div class="ingresso">
+
+											<a class="list-item" href="http://ead.inscricao.crmeducacional.com/login/6703" target="_blank">Com sua nota do Enem</a>
+										</div>
+										<div class="ingresso">
+											<a class="list-item" href="http://ead.inscricao.crmeducacional.com/login/6803" target="_blank">Redação
+												On-line</a>
+										</div>
+									</div>
+								</div>
+
+								<button class="accordion">Já sou aluno</button>
+								<div class="panel">
+									<div>
+										<div>
+											<p>Aguardar o processo seletivo da Bolsa Social para Veteranos, que será aberto posteriormente</p>
+										</div>
+									</div>
+								</div>
+								<footer>
+									<div>
+										<a href="https://metodista.br/processoseletivo/editais/edital-bolsa-social-EAD2021-2.pdf" target="_blank">Edital</a>
+									</div>
+								</footer>
+							</div>
+						</div>
+
+
 						<footer>
 							<div>
-								<a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a>
+								<!-- <a href="#" id="formEstrangeiros" title="Sou Estrangeiro">Sou Estrangeiro</a> -->
 							</div>
 							<!-- <div>
 								<div>
@@ -126,7 +324,7 @@
 										<label for="modal__state" class="modal__overlay-close"></label>
 										<div class="modal">
 											<label class="button button--close modal__close" for="modal__state">X</label>
-											<h3>Formulário de Inscrição para Estrangeiros</h3>
+											<h3>FormulÃ¡rio de Inscrição para Estrangeiros</h3>
 											<form id="form-estrangeiro" method="POST" action="http://metodista.api.crmeducacional.com/api/IntegracaoFormularioInteresse/SalvarDados" enctype="application/x-www-form-urlencoded">
 
 												<div class="form-group">
@@ -158,33 +356,33 @@
 														<select class="form-control" id="cursoEad" name="crmeduc_curso_interesse" required>
 															<option value="Default" disabled selected>Selecione o curso</option>
 															<option value="33">Administração</option>
-															<option value="2">Análise e Desenvolvimento de Sistemas</option>
-															<option value="6">Ciências Contábeis</option>
+															<option value="2">AnÃ¡lise e Desenvolvimento de Sistemas</option>
+															<option value="6">Ciências ContÃ¡beis</option>
 															<option value="107">Ciência de Dados e Big Data</option>
 															<option value="110">Comunicação Digital e Redes Sociais</option>
-															<option value="120">Educação Física (Bacharelado)</option>
-															<option value="111">Educação Física (Licenciatura)</option>
+															<option value="120">Educação FÃ­sica (Bacharelado)</option>
+															<option value="111">Educação FÃ­sica (Licenciatura)</option>
 															<option value="12">Engenharia Civil</option>
 															<option value="13">Engenharia de Computação</option>
 															<option value="14">Engenharia de Produção</option>
-															<option value="113">Gestão Ambiental</option>
-															<option value="103">Gestão Comercial</option>
-															<option value="19">Gestão de Recursos Humanos</option>
-															<option value="115">Gestão de Seguros</option>
-															<option value="21">Gestão Financeira</option>
-															<option value="116">Gestão Pública</option>
+															<option value="113">GestÃ£o Ambiental</option>
+															<option value="103">GestÃ£o Comercial</option>
+															<option value="19">GestÃ£o de Recursos Humanos</option>
+															<option value="115">GestÃ£o de Seguros</option>
+															<option value="21">GestÃ£o Financeira</option>
+															<option value="116">GestÃ£o PÃºblica</option>
 															<option value="117">Jogos Digitais</option>
 															<option value="125">Jornalismo</option>
-															<option value="24">Logística</option>
+															<option value="24">LogÃ­stica</option>
 															<option value="25">Marketing</option>
 															<option value="118">Nutrição</option>
 															<option value="26">Pedagogia</option>
 															<option value="27">Processos Gerenciais</option>
 															<option value="104">Produção Audiovisual</option>
-															<option value="134">Produção Multimídia</option>
-															<option value="108">Produção Publicitária</option>
-															<option value="112">Segurança Pública</option>
-															<option value="31">Serviço Social</option>
+															<option value="134">Produção MultimÃ­dia</option>
+															<option value="108">Produção PublicitÃ¡ria</option>
+															<option value="112">SeguranÃ§a PÃºblica</option>
+															<option value="31">ServiÃ§o Social</option>
 															<option value="141">Teologia</option>
 														</select>
 													</div>
@@ -237,7 +435,7 @@
 				scrNav();
 			});
 
-			// scrNav function 
+			// scrNav function
 			// Change active dot according to the active section in the window
 			function scrNav() {
 				var sTop = $(window).scrollTop();
@@ -255,7 +453,7 @@
 		});
 	</script>
 	<script>
-		//MODAL 
+		//MODAL
 
 		$("#modal__state").change(function () {
 			$(".tabs").toggle();
@@ -296,6 +494,26 @@
 			});
 		});
 	</script>
+
+
+	<!-- SCRIPT MODAL BOLSA -->
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		}
+	</script>
+
 
 </body>
 
